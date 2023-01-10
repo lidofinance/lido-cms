@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Slavik191/Slavik191.github.io
+  repo: lidofinance/cms
   branch: main # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 show_preview_links: false
