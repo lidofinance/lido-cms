@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const rawOrigin = process.env.ORIGIN;
-if (rawOrigin == null || rawOrigin == "") {
-  console.error("You need to specify ORIGIN environment variable");
-  process.exit();
-}
-const origins = rawOrigin.split(",").map((origin) => new URL(origin).host);
-
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
@@ -14,15 +7,9 @@ const nextConfig = {
     unoptimized: true,
   },
   publicRuntimeConfig: {
-    origins,
-    redirectUri: process.env.REDIRECT_URL,
-    loginAuthTarget: process.env.AUTH_TARGET || "_self",
-    oauthProvider: process.env.OAUTH_PROVIDER || "github",
-    scopes: process.env.SCOPES || "repo",
-    // Supply GIT_HOSTNAME for enterprise github installs.
-    tokenHost: process.env.GIT_HOSTNAME || "https://github.com",
-    tokenPath: process.env.OAUTH_TOKEN_PATH || "/login/oauth/access_token",
-    authorizePath: process.env.OAUTH_AUTHORIZE_PATH || "/login/oauth/authorize",
+    baseUrl: process.env.BASE_URL || "http://localhost:3000",
+    githubRepo: process.env.GITHUB_REPO || "lidofinance/cms",
+    githubBranch: process.env.GITHUB_BRANCH || "main",
   },
   serverRuntimeConfig: {
     oauthClientId: process.env.OAUTH_CLIENT_ID,

@@ -1,9 +1,9 @@
 import { useEffect, FC } from "react";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
-import { oauth2 } from "shared/authentication/api/oauth2";
+import { oauth2 } from "widgets/auth";
 
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
+const { publicRuntimeConfig } = getConfig();
 
 interface CallbackProps {
   message: string;
@@ -12,12 +12,12 @@ interface CallbackProps {
 
 const Callback: FC<CallbackProps> = ({ message, content }) => {
   useEffect(() => {
-    const oauthProvider = publicRuntimeConfig.oauthProvider;
-    const origins = publicRuntimeConfig.origins;
+    const oauthProvider = 'github';
     function recieveMessage(e: MessageEvent) {
       console.log("recieveMessage %o", e);
-      const origin = new URL(e.origin).host;
-      if (!origins.includes(origin)) {
+      const originHost = new URL(e.origin).host;
+      const baseUrlHost = new URL(publicRuntimeConfig.baseUrl).host
+      if (originHost !== baseUrlHost) {
         console.log("Invalid origin: %s", e.origin);
         return;
       }
@@ -38,21 +38,6 @@ const Callback: FC<CallbackProps> = ({ message, content }) => {
 
 export default Callback;
 
-const getOptions = (code: string) => {
-  let options: Record<string, string> = {
-    code,
-  };
-
-  if (publicRuntimeConfig.oauthProvider === "gitlab") {
-    options.client_id = serverRuntimeConfig.oauthClientId;
-    options.client_secret = serverRuntimeConfig.oauthClientServer;
-    options.grant_type = "authorization_code";
-    options.redirect_uri = publicRuntimeConfig.redirectUri;
-  }
-
-  return options;
-};
-
 const getAccessToken = (options: Record<string, string>) =>
   new Promise<{ message: string; content: any }>((resolve) => {
     oauth2.authorizationCode.getToken(options, (error: Error, result: any) => {
@@ -64,12 +49,11 @@ const getAccessToken = (options: Record<string, string>) =>
         });
       } else {
         const token = oauth2.accessToken.create(result);
-        console.log(token);
         resolve({
           message: "success",
           content: {
             token: token.token.access_token,
-            provider: publicRuntimeConfig.oauthProvider,
+            provider: 'github'
           },
         });
       }
@@ -80,8 +64,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (context.query.code == null || Array.isArray(context.query.code)) {
     throw new Error("code wasn't specified");
   }
-  const options = await getOptions(context.query.code);
-  const { message, content } = await getAccessToken(options);
+  const { message, content } = await getAccessToken({
+    code: context.query.code
+  });
   return {
     props: {
       message,
