@@ -9,8 +9,8 @@ export const oauth2 = simpleOauthModule.create({
     secret: serverRuntimeConfig.oauthClientSecret,
   },
   auth: {
-    tokenHost: 'https://github.com',
-    tokenPath: '/login/oauth/access_token',
-    authorizePath: '/login/oauth/authorize',
+    tokenHost: "https://github.com",
+    tokenPath: "/login/oauth/access_token",
+    authorizePath: "/login/oauth/authorize",
   },
 });

@@ -12,11 +12,11 @@ interface CallbackProps {
 
 const Callback: FC<CallbackProps> = ({ message, content }) => {
   useEffect(() => {
-    const oauthProvider = 'github';
+    const oauthProvider = "github";
     function recieveMessage(e: MessageEvent) {
       console.log("recieveMessage %o", e);
       const originHost = new URL(e.origin).host;
-      const baseUrlHost = new URL(publicRuntimeConfig.baseUrl).host
+      const baseUrlHost = new URL(publicRuntimeConfig.baseUrl).host;
       if (originHost !== baseUrlHost) {
         console.log("Invalid origin: %s", e.origin);
         return;
@@ -53,7 +53,7 @@ const getAccessToken = (options: Record<string, string>) =>
           message: "success",
           content: {
             token: token.token.access_token,
-            provider: 'github'
+            provider: "github",
           },
         });
       }
@@ -65,7 +65,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     throw new Error("code wasn't specified");
   }
   const { message, content } = await getAccessToken({
-    code: context.query.code
+    code: context.query.code,
   });
   return {
     props: {

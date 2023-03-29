@@ -10,7 +10,7 @@ export default function Auth() {
 
 export const getServerSideProps = () => {
   const authorizationUri = oauth2.authorizationCode.authorizeURL({
-    redirect_uri: publicRuntimeConfig.baseUrl + '/callback',
+    redirect_uri: publicRuntimeConfig.baseUrl + "/callback",
     state: nanoid(32),
   });
   return {

@@ -1,6 +1,6 @@
-import jsyaml from 'js-yaml'
+import jsyaml from "js-yaml";
 
-declare var CMS: any
+declare var CMS: any;
 
 export const renderCustomDirective = (name: string, options: any) =>
   `:::${name}\n` + (options ? jsyaml.dump(options) : "") + ":::";
