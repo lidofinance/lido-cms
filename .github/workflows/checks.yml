@@ -20,16 +20,23 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          cache: 'yarn'
+          node-version: "16"
+          cache: "yarn"
 
       - name: Install dependencies
         run: yarn install --immutable
 
       - name: Run quick checks
-        # -e allows running all commands without stopping execution if any intermediate fails
-        run: set -e; { yarn format && yarn lint && yarn types }; set +e
+        run: |
+          # -e allows running all commands without stopping execution if any intermediate fails
+          set -e
+
+          yarn format
+          yarn lint
+          yarn types
+
+          # need to turn it back
+          set +e
 
       - name: Build
         run: yarn build
-
