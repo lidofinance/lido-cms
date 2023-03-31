@@ -1,4 +1,4 @@
-import { oauth2 } from "widgets/auth";
+import { githubApp } from "widgets/auth";
 import { nanoid } from "nanoid";
 import getConfig from "next/config";
 
@@ -9,13 +9,14 @@ export default function Auth() {
 }
 
 export const getServerSideProps = () => {
-  const authorizationUri = oauth2.authorizationCode.authorizeURL({
-    redirect_uri: publicRuntimeConfig.baseUrl + "/callback",
+  const authResult = githubApp.getWebFlowAuthorizationUrl({
+    redirectUrl: publicRuntimeConfig.baseUrl + "/callback",
     state: nanoid(32),
   });
+
   return {
     redirect: {
-      destination: authorizationUri,
+      destination: authResult.url,
     },
   };
 };
