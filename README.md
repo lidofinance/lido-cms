@@ -1,6 +1,12 @@
 # CMS
 
-# Local development
+# Local development (files are saved locally)
+
+- Install dependencies with `yarn`.
+- Run `npx netlify-cms-proxy-server` from the root directory of the above repository.
+- Run dev server with `yarn dev`.
+
+# Local development (files are saved on github)
 
 - Install dependencies with `yarn`.
 - Setup `.env` file with `cp .env.sample .env`.

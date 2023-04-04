@@ -1,7 +1,6 @@
 import getConfig from "next/config";
 
 const { publicRuntimeConfig } = getConfig();
-
 export const initializeCMS = () => {
   CMS.init({
     config: {
@@ -11,6 +10,7 @@ export const initializeCMS = () => {
         branch: publicRuntimeConfig.githubBranch,
         base_url: publicRuntimeConfig.baseUrl,
       },
+      local_backend: true,
       publish_mode: "editorial_workflow",
       show_preview_links: false,
       media_folder: "public/img",
