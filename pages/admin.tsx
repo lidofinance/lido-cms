@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { initializeCMS, registerTable } from "widgets/cms";
+import { initializeCMS, registerScorecardTable } from "widgets/cms";
 
 export default function Tmp() {
   useEffect(() => {
@@ -7,8 +7,13 @@ export default function Tmp() {
       const CMS = (await import("netlify-cms-app")).default;
       globalThis.CMS = CMS;
 
+      // initialization CMS
       initializeCMS();
-      registerTable();
+
+      // Custom widgets
+      // All custom widgets must be initialized here
+      // Scorecard:
+      registerScorecardTable();
     })();
   }, []);
 

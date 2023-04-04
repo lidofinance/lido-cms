@@ -1,7 +1,15 @@
-import { registerCustomDirective } from "./customDirectiveUtils";
+import { registerCustomDirective } from "widgets/cms/utils/customDirectiveUtils";
 
-export const registerTable = () =>
-  registerCustomDirective("table", {
+interface Row {
+  ["scorecard-attribute"]?: string;
+  ["categories"]?: string;
+  ["self-assessment"]?: string;
+  ["comments"]?: string;
+}
+
+export const registerScorecardTable = () =>
+  registerCustomDirective("scorecard-table", {
+    label: "Table",
     fields: [
       {
         name: "rows",
@@ -42,9 +50,9 @@ export const registerTable = () =>
         ],
       },
     ],
-    toPreview: ({ rows = [] }) => {
+    toPreview: ({ rows = [] }: { rows: Row[] }) => {
       let rowsString = "";
-      rows.forEach((row) => {
+      rows.forEach((row: Row) => {
         rowsString = `
       ${rowsString}
       ${`
