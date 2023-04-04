@@ -24,7 +24,7 @@ export const initializeCMS = () => {
               name: "scorecard",
               label: "Scorecard",
               description: "Scorecard page",
-              file: "content/scorecard.md",
+              file: "public/content/lido-landing/scorecard.md",
               fields: [
                 { label: "Title", name: "title", widget: "string" },
                 { label: "Description", name: "description", widget: "text" },
