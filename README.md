@@ -3,7 +3,7 @@
 # Local development (files are saved locally)
 
 - Install dependencies with `yarn`.
-- Run `npx netlify-cms-proxy-server` from the root directory of the above repository.
+- Run `yarn proxy` from the root directory of the above repository.
 - Run dev server with `yarn dev`.
 
 # Local development (files are saved on github)
