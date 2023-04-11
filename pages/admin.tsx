@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { initializeCMS, registerScorecardTable } from "widgets/cms";
+import { initializeCMS, registerScorecardTable } from "features/cms";
 
 export default function Tmp() {
   useEffect(() => {

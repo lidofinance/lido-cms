@@ -1,7 +1,7 @@
 import { useEffect, FC } from "react";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
-import { githubApp } from "widgets/auth";
+import { githubApp } from "features/auth";
 
 const { publicRuntimeConfig } = getConfig();
 

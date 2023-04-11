@@ -1,4 +1,4 @@
-import { githubApp } from "widgets/auth";
+import { githubApp } from "features/auth";
 import { nanoid } from "nanoid";
 import getConfig from "next/config";
 

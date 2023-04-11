@@ -1,4 +1,4 @@
-import { registerCustomDirective } from "widgets/cms/utils/customDirectiveUtils";
+import { registerCustomDirective } from "features/cms/utils/customDirectiveUtils";
 
 interface Row {
   ["scorecard-attribute"]?: string;
