@@ -4,7 +4,7 @@ export const scorecard: CmsCollectionFile = {
   name: "scorecard",
   label: "Scorecard",
   description: "Scorecard page",
-  file: "public/content/lido-landing/scorecard.md",
+  file: "lido-landing/scorecard.md",
   fields: [
     { label: "Title", name: "title", widget: "string" },
     { label: "Description", name: "description", widget: "text" },
