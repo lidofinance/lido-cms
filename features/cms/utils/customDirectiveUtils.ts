@@ -12,7 +12,15 @@ interface Options {
 }
 
 export const renderCustomDirective = (name: string, object: object) =>
-  `:::${name}\n` + (object ? jsyaml.dump(object) : "") + ":::";
+  `:::${name}\n` +
+  (object
+    ? jsyaml.dump(object, {
+        forceQuotes: true,
+        quotingType: '"',
+        noCompatMode: true,
+      })
+    : "") +
+  ":::";
 
 export const customDirectivePattern = (name: string) =>
   new RegExp(`^:::${name}\\n([\\s\\S]+?\\n)?:::$`, "m");
