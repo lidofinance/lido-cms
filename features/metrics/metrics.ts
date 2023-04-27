@@ -1,7 +1,7 @@
-import { collectDefaultMetrics, Registry } from 'prom-client';
-import { METRICS_PREFIX } from './config';
-import { RequestMetrics } from './requestMetrics';
-import { BuildInfoMetrics } from './buildInfoMetrics';
+import { collectDefaultMetrics, Registry } from "prom-client";
+import { METRICS_PREFIX } from "./config";
+import { RequestMetrics } from "./requestMetrics";
+import { BuildInfoMetrics } from "./buildInfoMetrics";
 
 export const metrics = new (class Metrics {
   registry = new Registry();

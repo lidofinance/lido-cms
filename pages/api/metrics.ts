@@ -1,8 +1,12 @@
-import { defaultErrorHandler, responseTimeMetric, wrapRequest } from '@lidofinance/next-api-wrapper';
-import { metrics } from 'features/metrics';
-import { metricsFactory } from '@lidofinance/next-pages';
-import { rateLimitWrapper } from 'features/rateLimit';
-import { serverLogger } from 'shared/api/logger';
+import {
+  defaultErrorHandler,
+  responseTimeMetric,
+  wrapRequest,
+} from "@lidofinance/next-api-wrapper";
+import { metrics } from "features/metrics";
+import { metricsFactory } from "@lidofinance/next-pages";
+import { rateLimitWrapper } from "features/rateLimit";
+import { serverLogger } from "shared/api/logger";
 
 const metricsPage = metricsFactory({
   registry: metrics.registry,
@@ -10,6 +14,6 @@ const metricsPage = metricsFactory({
 
 export default wrapRequest([
   rateLimitWrapper,
-  responseTimeMetric(metrics.request.apiTimings, '/api/metrics'),
-  defaultErrorHandler({ serverLogger })
+  responseTimeMetric(metrics.request.apiTimings, "/api/metrics"),
+  defaultErrorHandler({ serverLogger }),
 ])(metricsPage);

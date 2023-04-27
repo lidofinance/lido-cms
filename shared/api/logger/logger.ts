@@ -1,5 +1,5 @@
-import getConfig from 'next/config';
-import { serverLoggerFactory } from '@lidofinance/api-logger';
+import getConfig from "next/config";
+import { serverLoggerFactory } from "@lidofinance/api-logger";
 
 const { serverRuntimeConfig } = getConfig();
 const { oauthClientSecret } = serverRuntimeConfig;

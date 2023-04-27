@@ -1,6 +1,6 @@
 import { Gauge, Registry } from "prom-client";
 import { METRICS_PREFIX } from "./config";
-import buildInfoJson from 'build-info.json';
+import buildInfoJson from "build-info.json";
 
 export class BuildInfoMetrics {
   buildInfo: Gauge<"version" | "commit" | "branch">;
@@ -12,7 +12,7 @@ export class BuildInfoMetrics {
       labelNames: ["version", "commit", "branch"],
       registers: [registry],
     });
-    const { version, commit, branch } = buildInfoJson
-    this.buildInfo.labels(version, commit, branch).set(1)
+    const { version, commit, branch } = buildInfoJson;
+    this.buildInfo.labels(version, commit, branch).set(1);
   }
 }

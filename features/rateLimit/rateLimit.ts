@@ -1,5 +1,5 @@
-import { rateLimitWrapper as rateLimitWrapperFactory } from '@lidofinance/next-ip-rate-limit';
-import getConfig from 'next/config';
+import { rateLimitWrapper as rateLimitWrapperFactory } from "@lidofinance/next-ip-rate-limit";
+import getConfig from "next/config";
 
 const { serverRuntimeConfig } = getConfig();
 
