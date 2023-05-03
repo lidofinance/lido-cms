@@ -358,10 +358,51 @@
   resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz#8ace5259254426ccef57f3175bc64ed7095ed919"
   integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
 
+"@lidofinance/api-logger@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/api-logger/-/api-logger-0.20.0.tgz#dd92b21afc0fe4745fa7acbf4c0ade89852957d2"
+  integrity sha512-OMdhW8nDS+YyDtzV8mWQ1DIaFZ5gDO9r1xHj6BFa1cntnxjIHa6oS3TUGGe9CmMEj+oZ+unNIo0KOgOCOpllPw==
+  dependencies:
+    "@lidofinance/satanizer" "~0.20.0"
+
+"@lidofinance/api-metrics@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/api-metrics/-/api-metrics-0.20.0.tgz#9a280c4945a81cbf56bbdacfe56af81a9743e68d"
+  integrity sha512-+0RPi0IJThJb6KhcgtiyPxORdr1EGpu9UxqL2iJO/pgbtwvysBtfSl5kQIFnEBvq98/TY8XYhmAgiycJKrXcvQ==
+
+"@lidofinance/next-api-wrapper@^0.20.0", "@lidofinance/next-api-wrapper@~0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/next-api-wrapper/-/next-api-wrapper-0.20.0.tgz#a823b4df0cdf16c55dd4ed33826eacc592e49734"
+  integrity sha512-Pd3RsWwnXUaXwnFwioT6IAYi00s98LX8zovNdmax7Zmy2wbEjdR4PnerDTH02c2sTmSMkTPGXng2qnc8yzl+/w==
+
 "@lidofinance/next-cache-files-middleware@^0.18.0":
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/@lidofinance/next-cache-files-middleware/-/next-cache-files-middleware-0.18.0.tgz#caa0ab0e2cfe616d5b7ddb030a6a22e6e56b95d4"
   integrity sha512-AY+9T637Jx+nGjDBuPD5STm8aNq7QqWHlBqCoA7JliaEMNUPqPrIIv/Fy0og1ogn9QzV0ApeG6oajQHZRJztuA==
+
+"@lidofinance/next-ip-rate-limit@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/next-ip-rate-limit/-/next-ip-rate-limit-0.20.0.tgz#f0cc9e0a2399facff9610c5b86316b58ef631b9c"
+  integrity sha512-mS8aepiiS5EGwV3SgjtH1aC4wx5QPzStB6g4N3lt5K1y5T17dS0hOEhqRewwWTIqHuNtW2nF4XT3MSpb+TLAcA==
+  dependencies:
+    "@lidofinance/next-api-wrapper" "~0.20.0"
+
+"@lidofinance/next-pages@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/next-pages/-/next-pages-0.20.0.tgz#79130976bb2112027ce533508de8e60410046e65"
+  integrity sha512-JZEV0h6la/PohtlD4avKkiRUtZ2vXY5ogxC1f7pH22jMsFArIRXjrfJDUKJrYbRuRM32vbvhYICZF/wpWdpyPw==
+
+"@lidofinance/rpc@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/rpc/-/rpc-0.20.0.tgz#5e8d7cb81ecb6bcd91f0459b5f5a9fa3ab138a14"
+  integrity sha512-dxzZifO1r90jpq+JMpJ8JUR4XM3m0pndKU+evq9vqKvmzAv30rz6T3TxlZ0mi7rH27Mj8BfNgjfKaWOOeOtkfA==
+  dependencies:
+    isomorphic-fetch "^3.0.0"
+
+"@lidofinance/satanizer@~0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@lidofinance/satanizer/-/satanizer-0.20.0.tgz#d71f7db83999d200d1d019a549dd308be2360843"
+  integrity sha512-hFLa7tdmvRnJR2Sv9SNP2UxmVEXp2YWaTTdggks/LWzCZOFNHgUbO3VjH2ujlVpTHUgsi0FJNHt7EjOsPDOI9g==
 
 "@mapbox/jsonlint-lines-primitives@~2.0.2":
   version "2.0.2"
@@ -1302,6 +1343,11 @@ big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
+
+bintrees@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/bintrees/-/bintrees-1.0.2.tgz#49f896d6e858a4a499df85c38fb399b9aff840f8"
+  integrity sha512-VOMgTMwjAaUG580SXn3LacVgjurrbMme7ZZNYGSSV7mmtY6QQRh0Eg3pwIcntQ77DErK1L0NxkbetjcoXzVwKw==
 
 body-parser@1.20.1:
   version "1.20.1"
@@ -3107,6 +3153,14 @@ isomorphic-base64@^1.0.2:
   resolved "https://registry.yarnpkg.com/isomorphic-base64/-/isomorphic-base64-1.0.2.tgz#f426aae82569ba8a4ec5ca73ad21a44ab1ee7803"
   integrity sha512-pQFyLwShVPA1Qr0dE1ZPguJkbOsFGDfSq6Wzz6XaO33v74X6/iQjgYPozwkeKGQxOI1/H3Fz7+ROtnV1veyKEg==
 
+isomorphic-fetch@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz#0267b005049046d2421207215d45d6a262b8b8b4"
+  integrity sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==
+  dependencies:
+    node-fetch "^2.6.1"
+    whatwg-fetch "^3.4.1"
+
 js-base64@^3.0.0:
   version "3.7.5"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.5.tgz#21e24cf6b886f76d6f5f165bfcd69cc55b9e3fca"
@@ -4061,7 +4115,7 @@ next@13.1.1:
     "@next/swc-win32-ia32-msvc" "13.1.1"
     "@next/swc-win32-x64-msvc" "13.1.1"
 
-node-fetch@^2.6.7:
+node-fetch@^2.6.1, node-fetch@^2.6.7:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.9.tgz#7c7f744b5cc6eb5fd404e0c7a9fec630a55657e6"
   integrity sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==
@@ -4393,6 +4447,13 @@ process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
+
+prom-client@^14.2.0:
+  version "14.2.0"
+  resolved "https://registry.yarnpkg.com/prom-client/-/prom-client-14.2.0.tgz#ca94504e64156f6506574c25fb1c34df7812cf11"
+  integrity sha512-sF308EhTenb/pDRPakm+WgiN+VdM/T1RaHj1x+MvAuT8UiQP8JmOEbxVqtkbfR4LrvOg5n7ic01kRBDGXjYikA==
+  dependencies:
+    tdigest "^0.1.1"
 
 prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
@@ -5506,6 +5567,13 @@ tapable@^2.2.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
+tdigest@^0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/tdigest/-/tdigest-0.1.2.tgz#96c64bac4ff10746b910b0e23b515794e12faced"
+  integrity sha512-+G0LLgjjo9BZX2MfdvPfH+MKLCrxlXSYec5DaPYP1fe6Iyhf0/fSmJ0bFiZ1F8BT6cGXl2LpltQptzjXKWEkKA==
+  dependencies:
+    bintrees "1.0.2"
+
 teeny-tap@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/teeny-tap/-/teeny-tap-0.2.0.tgz#167e645182d06ac222d62bb2ab67947a70a58a68"
@@ -6007,6 +6075,11 @@ what-the-diff@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/what-the-diff/-/what-the-diff-0.6.0.tgz#445cc56a9d8ee9aea0ee1ed943f4957ae009291e"
   integrity sha512-8BgQ4uo4cxojRXvCIcqDpH4QHaq0Ksn2P3LYfztylC5LDSwZKuGHf0Wf7sAStjPLTcB8eCB8pJJcPQSWfhZlkg==
+
+whatwg-fetch@^3.4.1:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
+  integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
 
 whatwg-url@^5.0.0:
   version "5.0.0"
