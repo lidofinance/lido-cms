@@ -17,6 +17,10 @@ export const initializeCMS = () => {
       show_preview_links: false,
       media_folder: "public/img",
       public_folder: "img",
+      media_library: {
+        name: "test",
+        config: {},
+      },
       collections: [lidoLanding],
     },
   });
