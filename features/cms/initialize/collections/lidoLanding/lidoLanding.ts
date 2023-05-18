@@ -6,8 +6,5 @@ import { ecosystem } from "./files/ecosystem";
 export const lidoLanding: CmsCollection = {
   name: "lido-landing",
   label: "Lido landing",
-  files: [
-    scorecard,
-    ecosystem
-  ],
+  files: [scorecard, ecosystem],
 };
