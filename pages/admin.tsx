@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import { initializeCMS, registerScorecardTable, registerSvgWidget } from "features/cms";
+import {
+  initializeCMS,
+  registerScorecardTable,
+  registerSvgWidget,
+} from "features/cms";
 
 export default function Tmp() {
   useEffect(() => {
@@ -16,7 +20,7 @@ export default function Tmp() {
       // Scorecard:
       registerScorecardTable();
       // Widgets:
-      registerSvgWidget()
+      registerSvgWidget();
     })();
   }, []);
 

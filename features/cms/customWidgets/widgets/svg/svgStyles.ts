@@ -12,7 +12,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img.attrs({
-  alt: "svg-image"
+  alt: "svg-image",
 })``;
 
 export const Button = styled.button`
