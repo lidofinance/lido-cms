@@ -1,4 +1,4 @@
-import type { CmsCollectionFile } from "netlify-cms-core";
+import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
 
 export const ecosystem: CmsCollectionFile = {
   name: "ecosystem",
@@ -14,7 +14,7 @@ export const ecosystem: CmsCollectionFile = {
       fields: [
         { label: "Name", name: "name", widget: "string" },
         { label: "Link", name: "link", widget: "string" },
-        { label: "Logo", name: "logo", widget: "image" },
+        { label: "Logo", name: "logo", widget: "svg" } as unknown as CmsField,
         {
           label: "Categories",
           name: "categories",

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { initializeCMS, registerScorecardTable } from "features/cms";
+import React, { useEffect } from "react";
+import { initializeCMS, registerScorecardTable, registerSvgWidget } from "features/cms";
 
 export default function Tmp() {
   useEffect(() => {
@@ -12,8 +12,11 @@ export default function Tmp() {
 
       // Custom widgets
       // All custom widgets must be initialized here
+      // Editor components:
       // Scorecard:
       registerScorecardTable();
+      // Widgets:
+      registerSvgWidget()
     })();
   }, []);
 
