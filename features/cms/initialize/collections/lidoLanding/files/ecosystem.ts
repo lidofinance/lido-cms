@@ -70,9 +70,11 @@ export const ecosystem: CmsCollectionFile = {
       widget: "list",
       label_singular: "new",
       fields: [
-        { label: "Name", name: "name", widget: "string" },
-        { label: "Link", name: "link", widget: "string" },
         { label: "Logo", name: "logo", widget: "svg" } as unknown as CmsField,
+        { label: "Name", name: "name", widget: "string" },
+        { label: "Description", name: "description", widget: "string" },
+        { label: "Link", name: "link", widget: "string" },
+        { label: "Learn more link", name: "learnMoreLink", widget: "string" },
         {
           label: "Categories",
           name: "categories",
@@ -84,7 +86,6 @@ export const ecosystem: CmsCollectionFile = {
           displayFields: ["config.categories.*.label"],
           multiple: true,
         } as unknown as CmsField,
-        { label: "Description", name: "description", widget: "string" },
         {
           label: "Networks",
           name: "networks",
@@ -97,12 +98,6 @@ export const ecosystem: CmsCollectionFile = {
           multiple: true,
         } as unknown as CmsField,
         {
-          label: "Most popular",
-          name: "mostPopular",
-          widget: "boolean",
-          default: false,
-        },
-        {
           label: "Tokens",
           name: "tokens",
           widget: "relation",
@@ -113,7 +108,12 @@ export const ecosystem: CmsCollectionFile = {
           displayFields: ["config.tokens.*.label"],
           multiple: true,
         } as unknown as CmsField,
-        { label: "Learn more link", name: "learnMoreLink", widget: "string" },
+        {
+          label: "Most popular",
+          name: "mostPopular",
+          widget: "boolean",
+          default: false,
+        },
         { label: "Ready", name: "ready", widget: "boolean", default: false },
       ],
     },
