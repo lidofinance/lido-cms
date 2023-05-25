@@ -3,6 +3,7 @@ import {
   initializeCMS,
   registerScorecardTable,
   registerSvgWidget,
+  registerUuidWidget,
 } from "features/cms";
 
 export default function Tmp() {
@@ -21,6 +22,7 @@ export default function Tmp() {
       registerScorecardTable();
       // Widgets:
       registerSvgWidget();
+      registerUuidWidget();
     })();
   }, []);
 
