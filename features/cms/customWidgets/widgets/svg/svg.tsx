@@ -95,7 +95,7 @@ const SvgControl = forwardRef(
             <Button onClick={deleteImage}>Delete</Button>
           </Wrapped>
         ) : (
-          <DragDrop uppy={uppy} height={150} />
+          <DragDrop uppy={uppy} height={"150px"} />
         )}
       </div>
     );

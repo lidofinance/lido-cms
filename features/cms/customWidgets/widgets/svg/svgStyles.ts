@@ -9,6 +9,8 @@ export const Wrapped = styled.div`
 
 export const ImageWrapper = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
 `;
 
 export const Image = styled.img.attrs({
