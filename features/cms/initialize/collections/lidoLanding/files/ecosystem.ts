@@ -23,7 +23,7 @@ export const ecosystem: CmsCollectionFile = {
             {
               name: "id",
               widget: "uuid",
-              hide: true
+              hide: true,
             } as unknown as CmsField,
             {
               label: "Label",
@@ -47,7 +47,7 @@ export const ecosystem: CmsCollectionFile = {
             {
               name: "id",
               widget: "uuid",
-              hide: true
+              hide: true,
             } as unknown as CmsField,
             {
               label: "Label",
@@ -66,7 +66,7 @@ export const ecosystem: CmsCollectionFile = {
             {
               name: "id",
               widget: "uuid",
-              hide: true
+              hide: true,
             } as unknown as CmsField,
             {
               label: "Label",
