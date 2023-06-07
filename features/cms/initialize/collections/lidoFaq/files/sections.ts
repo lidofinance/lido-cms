@@ -7,40 +7,40 @@ export const sections: CmsCollectionFile = {
   file: "lido-faq/sections.md",
   fields: [
     {
-        widget: 'list',
-        name: 'faq',
-        label: 'FAQ',
-        fields: [
+      widget: "list",
+      name: "faq",
+      label: "FAQ",
+      fields: [
+        {
+          widget: "list",
+          name: "sections",
+          label: "Sections",
+          fields: [
             {
-                widget: 'list',
-                name: 'sections',
-                label: 'Sections',
-                fields: [
-                    {
-                        widget: 'string',
-                        name: 'section_name',
-                        label: 'Section name'
-                    },
-                    {
-                        widget: 'list',
-                        name: 'q&a',
-                        label: 'Q&A',
-                        fields: [
-                            {
-                                name: 'question',
-                                label: 'Question',
-                                widget: 'string'
-                            },
-                            {
-                                name: 'answer',
-                                label: 'Answer',
-                                widget: 'markdown',
-                            }
-                        ]
-                    }
-                ]
+              widget: "string",
+              name: "section_name",
+              label: "Section name",
             },
-        ]
-    }
+            {
+              widget: "list",
+              name: "q&a",
+              label: "Q&A",
+              fields: [
+                {
+                  name: "question",
+                  label: "Question",
+                  widget: "string",
+                },
+                {
+                  name: "answer",
+                  label: "Answer",
+                  widget: "markdown",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
