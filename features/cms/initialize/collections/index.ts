@@ -1,2 +1,2 @@
 export * from "./lidoLanding/lidoLanding";
-export * from "./lidoFaq/lidoFaq";
+export * from "./lidoLanding/lidoFaq";
