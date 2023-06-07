@@ -8,35 +8,28 @@ export const sections: CmsCollectionFile = {
   fields: [
     {
       widget: "list",
-      name: "faq",
-      label: "FAQ",
+      name: "sections",
+      label: "Sections",
       fields: [
         {
+          widget: "string",
+          name: "section_name",
+          label: "Section name",
+        },
+        {
           widget: "list",
-          name: "sections",
-          label: "Sections",
+          name: "q&a",
+          label: "Q&A",
           fields: [
             {
+              name: "question",
+              label: "Question",
               widget: "string",
-              name: "section_name",
-              label: "Section name",
             },
             {
-              widget: "list",
-              name: "q&a",
-              label: "Q&A",
-              fields: [
-                {
-                  name: "question",
-                  label: "Question",
-                  widget: "string",
-                },
-                {
-                  name: "answer",
-                  label: "Answer",
-                  widget: "markdown",
-                },
-              ],
+              name: "answer",
+              label: "Answer",
+              widget: "markdown",
             },
           ],
         },
