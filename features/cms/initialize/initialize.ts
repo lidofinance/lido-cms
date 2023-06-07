@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 
-import { lidoLanding } from "./collections";
+import { lidoFaq, lidoLanding } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
@@ -17,7 +17,7 @@ export const initializeCMS = () => {
       show_preview_links: false,
       media_folder: "public/img",
       public_folder: "img",
-      collections: [lidoLanding],
+      collections: [lidoLanding, lidoFaq],
     },
   });
 };
