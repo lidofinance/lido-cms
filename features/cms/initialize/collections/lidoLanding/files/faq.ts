@@ -1,10 +1,10 @@
 import type { CmsCollectionFile } from "netlify-cms-core";
 
-export const sections: CmsCollectionFile = {
+export const faq: CmsCollectionFile = {
   name: "faq",
   label: "FAQ",
   description: "FAQ page",
-  file: "lido-landing/sections.md",
+  file: "lido-landing/faq.md",
   fields: [
     {
       widget: "list",
@@ -30,6 +30,7 @@ export const sections: CmsCollectionFile = {
               name: "answer",
               label: "Answer",
               widget: "markdown",
+              editor_components: [],
               modes: ["rich_text"],
               buttons: ["link", "bulleted-list", "bold"],
             },
