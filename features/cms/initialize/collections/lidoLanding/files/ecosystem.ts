@@ -99,7 +99,7 @@ export const ecosystem: CmsCollectionFile = {
         { label: "Name", name: "name", widget: "string" },
         { label: "Description", name: "description", widget: "string" },
         { label: "Link", name: "link", widget: "string" },
-        { label: "Learn more link", name: "learnMoreLink", widget: "string" },
+        { label: "Learn more link", name: "learnMoreLink", widget: "string", required: false },
         {
           label: "Tokens",
           name: "tokens",
@@ -133,12 +133,6 @@ export const ecosystem: CmsCollectionFile = {
           displayFields: ["config.networks.*.label"],
           multiple: true,
         } as unknown as CmsField,
-        {
-          label: "Most popular",
-          name: "mostPopular",
-          widget: "boolean",
-          default: false,
-        },
         { label: "Ready", name: "ready", widget: "boolean", default: false },
       ],
     },
@@ -159,6 +153,7 @@ export const ecosystem: CmsCollectionFile = {
           valueField: "projects.*.id",
           displayFields: ["projects.*.name"],
           multiple: true,
+          max: 8,
           required: false,
         } as unknown as CmsField,
         {
@@ -171,6 +166,7 @@ export const ecosystem: CmsCollectionFile = {
           valueField: "projects.*.id",
           displayFields: ["projects.*.name"],
           multiple: true,
+          max: 8,
           required: false,
         } as unknown as CmsField,
         {
@@ -183,6 +179,7 @@ export const ecosystem: CmsCollectionFile = {
           valueField: "projects.*.id",
           displayFields: ["projects.*.name"],
           multiple: true,
+          max: 8,
           required: false,
         } as unknown as CmsField,
         {
@@ -195,6 +192,7 @@ export const ecosystem: CmsCollectionFile = {
           valueField: "projects.*.id",
           displayFields: ["projects.*.name"],
           multiple: true,
+          max: 8,
           required: false,
         } as unknown as CmsField,
       ],
