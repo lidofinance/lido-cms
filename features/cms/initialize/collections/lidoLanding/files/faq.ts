@@ -8,8 +8,8 @@ export const faq: CmsCollectionFile = {
   fields: [
     {
       widget: "list",
-      name: "sections",
-      label: "Sections",
+      name: "categories",
+      label: "Categories",
       fields: [
         {
           widget: "string",
