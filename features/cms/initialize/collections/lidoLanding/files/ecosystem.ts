@@ -99,7 +99,12 @@ export const ecosystem: CmsCollectionFile = {
         { label: "Name", name: "name", widget: "string" },
         { label: "Description", name: "description", widget: "string" },
         { label: "Link", name: "link", widget: "string" },
-        { label: "Learn more link", name: "learnMoreLink", widget: "string", required: false },
+        {
+          label: "Learn more link",
+          name: "learnMoreLink",
+          widget: "string",
+          required: false,
+        },
         {
           label: "Tokens",
           name: "tokens",
