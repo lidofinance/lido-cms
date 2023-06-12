@@ -20,7 +20,7 @@ const readFile = (file: UppyFile): Promise<string> => {
     reader.onload = (event: ProgressEvent<FileReader>) =>
       event.target && typeof event.target.result === "string"
         ? resolve(event.target.result)
-        : "";
+        : reject("svg loading error");
     reader.onerror = (err) => reject(err);
     reader.readAsText(file.data);
   });
@@ -38,11 +38,9 @@ const SvgControl = forwardRef(
     };
 
     const clearUppy = () => {
-      if (uppy) {
-        uppy.getFiles().forEach((file) => {
-          uppy.removeFile(file.id);
-        });
-      }
+      uppy?.getFiles().forEach((file) => {
+        uppy.removeFile(file.id);
+      });
     };
 
     const deleteImage = () => {
@@ -66,12 +64,13 @@ const SvgControl = forwardRef(
         autoProceed: false,
       });
 
-      uppyInstance.on("file-added", (file) => {
-        readFile(file).then((content) => {
-          let base64Svg = encodeURIComponent(content);
-          let dataUri = `data:image/svg+xml,${base64Svg}`;
-          onChange(dataUri);
-        });
+      uppyInstance.on("file-added", async (file) => {
+        const content = await readFile(file);
+
+        let base64Svg = encodeURIComponent(content);
+        let dataUri = `data:image/svg+xml,${base64Svg}`;
+
+        onChange(dataUri);
       });
 
       setUppy(uppyInstance);
