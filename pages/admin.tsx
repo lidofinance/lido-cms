@@ -4,6 +4,7 @@ import {
   registerScorecardTable,
   registerSvgWidget,
   registerUuidWidget,
+  registerInfoWidget,
 } from "features/cms";
 
 export default function Tmp() {
@@ -23,6 +24,7 @@ export default function Tmp() {
       // Widgets:
       registerSvgWidget();
       registerUuidWidget();
+      registerInfoWidget();
     })();
   }, []);
 
