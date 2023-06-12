@@ -12,6 +12,23 @@ export const ecosystemProjects: CmsCollection = {
       widget: "uuid",
       hide: true,
     } as unknown as CmsField,
+    {
+      name: "info",
+      label: "Info",
+      widget: "info",
+      data: [
+        {
+          description:
+            "To add/update/delete tokens/categories/networks, follow the link below:",
+          links: [
+            [
+              "Go to project config",
+              "http://localhost:3001/admin/#/collections/ecosystem-config/entries/project",
+            ],
+          ],
+        },
+      ],
+    } as unknown as CmsField,
     { label: "Logo", name: "logo", widget: "svg" } as unknown as CmsField,
     { label: "Name", name: "name", widget: "string" },
     { label: "Description", name: "description", widget: "string" },

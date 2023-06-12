@@ -7,6 +7,19 @@ export const ecosystem: CmsCollectionFile = {
   file: "public/lido-landing/ecosystem/ecosystem.md",
   fields: [
     {
+      name: "info",
+      label: "Info",
+      widget: "info",
+      data: [
+        {
+          description: "To add a new project, follow the link below:",
+          links: [
+            ["add new project", "/admin/#/collections/ecosystem-projects"],
+          ],
+        },
+      ],
+    } as unknown as CmsField,
+    {
       label: "Most Popular",
       name: "mostPopular",
       widget: "relation",
