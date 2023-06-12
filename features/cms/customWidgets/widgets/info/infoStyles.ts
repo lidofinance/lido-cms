@@ -21,6 +21,7 @@ export const Block = styled.div`
 
 export const Text = styled.p`
   width: 100%;
+  margin: 0;
 `;
 
 export const Link = styled.a.attrs({
