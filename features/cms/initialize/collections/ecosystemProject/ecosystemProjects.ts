@@ -6,7 +6,12 @@ export const ecosystemProjects: CmsCollection = {
   folder: "public/lido-landing/ecosystem/projects",
   create: true,
   slug: "{{fields.id}}",
-  hide: true,
+  summary: `{{fields.name}}`,
+  sortable_fields: [],
+  view_filters: [
+    { label: "Published", field: "ready", pattern: "true" },
+    { label: "Not published", field: "ready", pattern: "false" },
+  ],
   fields: [
     {
       name: "id",
@@ -17,6 +22,7 @@ export const ecosystemProjects: CmsCollection = {
       name: "info",
       label: "Info",
       widget: "info",
+      required: false,
       data: [
         {
           description:

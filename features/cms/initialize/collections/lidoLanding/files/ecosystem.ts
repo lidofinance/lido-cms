@@ -10,9 +10,10 @@ export const ecosystem: CmsCollectionFile = {
       name: "info",
       label: "Info",
       widget: "info",
+      required: false,
       data: [
         {
-          description: "To add a new project, follow the link below:",
+          description: "To add/update/delete project, follow the link below:",
           links: [
             ["add new project", "/admin/#/collections/ecosystem-projects"],
           ],
