@@ -6,6 +6,7 @@ export const ecosystemProjects: CmsCollection = {
   folder: "public/lido-landing/ecosystem/projects",
   create: true,
   slug: "{{fields.id}}",
+  hide: true,
   fields: [
     {
       name: "id",
