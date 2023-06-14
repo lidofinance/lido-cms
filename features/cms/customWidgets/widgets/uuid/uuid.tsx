@@ -8,15 +8,15 @@ import React, {
 import { v4 as uuidv4 } from "uuid";
 import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
 
-const hideElement = (
-  ref: RefObject<HTMLDivElement>,
-  hideParentElement: boolean = false
+const visibilityElement = (
+  display: "block" | "none",
+  ref: RefObject<HTMLDivElement>
 ) => {
   const { current } = ref;
   if (!current) return;
-  const element = hideParentElement ? current.parentElement : current;
+  const element = current.parentElement;
   if (!element) return;
-  element.style.display = "none";
+  element.style.display = display;
 };
 
 const UuidControl = forwardRef(
@@ -51,7 +51,11 @@ const UuidControl = forwardRef(
     }, []);
 
     useEffect(() => {
-      if (hide) hideElement(ref, true);
+      if (hide) {
+        visibilityElement("none", ref);
+      } else {
+        visibilityElement("block", ref);
+      }
     }, [hide]);
 
     return (
@@ -70,7 +74,11 @@ const UuidPreview = ({
   let ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (hide) hideElement(ref);
+    if (hide) {
+      visibilityElement("none", ref);
+    } else {
+      visibilityElement("block", ref);
+    }
   }, [hide]);
 
   return <div ref={ref}>{value ?? ""}</div>;
