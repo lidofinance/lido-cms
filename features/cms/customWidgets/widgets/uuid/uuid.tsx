@@ -45,12 +45,14 @@ const UuidControl = forwardRef(
     );
 
     useEffect(() => {
-      if (hide) hideElement(ref, true);
-
       if (value) return;
       const uuid = uuidv4();
       onChange(uuid);
     }, []);
+
+    useEffect(() => {
+      if (hide) hideElement(ref, true);
+    }, [hide]);
 
     return (
       <div ref={ref} className={classNameWrapper}>
@@ -69,7 +71,7 @@ const UuidPreview = ({
 
   useEffect(() => {
     if (hide) hideElement(ref);
-  }, []);
+  }, [hide]);
 
   return <div ref={ref}>{value ?? ""}</div>;
 };
