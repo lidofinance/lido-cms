@@ -4,7 +4,7 @@ export const ecosystem: CmsCollectionFile = {
   name: "ecosystem",
   label: "Ecosystem",
   description: "Ecosystem page",
-  file: "public/lido-landing/ecosystem/ecosystem.md",
+  file: "lido-landing/ecosystem/ecosystem.md",
   fields: [
     {
       name: "info",

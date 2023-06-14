@@ -4,7 +4,7 @@ export const project: CmsCollectionFile = {
   name: "project",
   label: "Project",
   description: "Config for ecosystem project",
-  file: "public/lido-landing/ecosystem/config/project.md",
+  file: "lido-landing/ecosystem/config/project.md",
   fields: [
     {
       name: "tokens",
