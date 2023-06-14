@@ -3,7 +3,7 @@ import type { CmsCollection, CmsField } from "netlify-cms-core";
 export const ecosystemProjects: CmsCollection = {
   name: "ecosystem-projects",
   label: "Ecosystem (Projects)",
-  folder: "public/lido-landing/ecosystem/projects",
+  folder: "lido-landing/ecosystem/projects",
   create: true,
   slug: "{{fields.id}}",
   summary: `{{fields.name}}`,
