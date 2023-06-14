@@ -36,7 +36,7 @@ const InfoControl = forwardRef(
             ) : null;
 
             const links: ReactNode[] = [];
-            (linksData || []).forEach((link: any) => {
+            linksData?.forEach((link: any) => {
               const label = link.getIn([0]);
               const href = link.getIn([1]);
 
