@@ -21,7 +21,7 @@ const readFile = (file: UppyFile): Promise<string> => {
       event.target && typeof event.target.result === "string"
         ? resolve(event.target.result)
         : reject("svg loading error");
-    reader.onerror = (err) => reject(err);
+    reader.onerror = reject;
     reader.readAsText(file.data);
   });
 };
