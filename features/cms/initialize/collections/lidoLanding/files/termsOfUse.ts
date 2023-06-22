@@ -34,46 +34,23 @@ export const termsOfUse: CmsCollectionFile = {
       ],
     },
     {
-      label: "Terms of use heading",
-      name: "termsOfUseHeading",
-      widget: "text",
-    },
-    {
-      label: "Terms of use",
-      name: "termsOfUse",
+      name: "content",
+      label: "Content",
       widget: "list",
       fields: [
-        {
-          label: "Paragraph",
-          name: "paragraph",
-          widget: "markdown",
-          modes: ["rich_text"],
-          buttons: ["bold", "link"],
-          editor_components: [],
-        },
-      ],
-    },
-    {
-      name: "bindingProvisionsHeading",
-      label: "Binding provisions heading",
-      widget: "text",
-    },
-    {
-      name: "bindingProvisions",
-      label: "Binding Provisions",
-      widget: "list",
-      fields: [
-        {
-          name: "header",
-          label: "Header",
-          widget: "text",
-        },
         {
           name: "paragraph",
           label: "Paragraph",
           widget: "markdown",
           modes: ["rich_text"],
-          buttons: ["bold", "link", "numbered-list", "bulleted-list"],
+          buttons: [
+            "link",
+            "bold",
+            "heading-two",
+            "heading-three",
+            "heading-four",
+            "numbered-list",
+          ],
           editor_components: [],
         },
       ],
