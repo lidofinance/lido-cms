@@ -4,7 +4,7 @@ export const termsOfUse: CmsCollectionFile = {
   name: "termsofuse",
   label: "Terms of use",
   description: "Terms of use page",
-  file: "public/lido-landing/termsOfUse.md",
+  file: "lido-landing/termsOfUse.md",
   fields: [
     {
       label: "Timestamp",
@@ -24,14 +24,10 @@ export const termsOfUse: CmsCollectionFile = {
     {
       label: "Precaution",
       name: "precaution",
-      widget: "list",
-      fields: [
-        {
-          label: "Paragraph",
-          name: "paragraph",
-          widget: "text",
-        },
-      ],
+      widget: "markdown",
+      modes: ["rich_text"],
+      editor_components: [],
+      buttons: ["bold", "link"],
     },
     {
       name: "content",
