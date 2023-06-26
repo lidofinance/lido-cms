@@ -1,4 +1,4 @@
-import type { CmsCollectionFile } from "netlify-cms-core";
+import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
 
 export const audits: CmsCollectionFile = {
   name: "audits",
@@ -22,10 +22,10 @@ export const audits: CmsCollectionFile = {
           label: "Href",
         },
         {
-          widget: "text",
+          widget: "svg",
           name: "logo",
           label: "Logo",
-        },
+        } as unknown as CmsField,
         {
           widget: "number",
           name: "logoHeight",
@@ -43,10 +43,10 @@ export const audits: CmsCollectionFile = {
           label: "Date Info",
         },
         {
-          widget: "text",
+          widget: "svg",
           name: "networkLogo",
           label: "Network Logo",
-        },
+        } as unknown as CmsField,
       ],
     },
   ],
