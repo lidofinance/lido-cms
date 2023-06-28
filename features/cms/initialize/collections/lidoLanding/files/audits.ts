@@ -12,14 +12,14 @@ export const audits: CmsCollectionFile = {
       label: "List of audits",
       fields: [
         {
-          widget: "text",
+          widget: "string",
           name: "info",
           label: "Info",
         },
         {
-          widget: "text",
+          widget: "string",
           name: "href",
-          label: "Href",
+          label: "Link",
         },
         {
           widget: "svg",
@@ -27,18 +27,12 @@ export const audits: CmsCollectionFile = {
           label: "Logo",
         } as unknown as CmsField,
         {
-          widget: "number",
-          name: "logoHeight",
-          label: "Logo Height",
-          default: 16,
-        },
-        {
-          widget: "text",
+          widget: "string",
           name: "networkInfo",
           label: "Network Info",
         },
         {
-          widget: "text",
+          widget: "datetime",
           name: "dateInfo",
           label: "Date Info",
         },
