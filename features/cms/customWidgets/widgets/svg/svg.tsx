@@ -26,26 +26,63 @@ const readFile = (file: UppyFile): Promise<string> => {
   });
 };
 
+const validationDimensionsSvg = (svgContent: string, options: any): boolean => {
+  let check = true;
+
+  const width = options?.get("size")?.get("width")?.toString();
+  const height = options?.get("size")?.get("height")?.toString();
+
+  if (!width && !height) return check;
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(svgContent, "image/svg+xml");
+  const svg = doc.getElementsByTagName("svg")[0];
+
+  let svgWidth = svg.getAttribute("width");
+  let svgHeight = svg.getAttribute("height");
+
+  console.log(svgWidth, svgHeight);
+
+  if (width && width !== svgWidth) check = false;
+  if (height && height !== svgHeight) check = false;
+
+  if (!check)
+    alert(
+      `The image dimensions must be: 
+${width ? `width: ${width}px` : ""}
+${height ? `height: ${height}px` : ""}`
+    );
+
+  return check;
+};
+
+const clearUppy = (uppy: Uppy | null) => {
+  uppy?.getFiles().forEach((file) => {
+    uppy.removeFile(file.id);
+  });
+};
+
 const SvgControl = forwardRef(
   (
-    { value, onChange, classNameWrapper }: CmsWidgetControlProps<string | null>,
+    {
+      field,
+      value,
+      onChange,
+      classNameWrapper,
+    }: CmsWidgetControlProps<string | null>,
     ref
   ) => {
     const [uppy, setUppy] = useState<null | Uppy>(null);
+
+    let options = field.get("options");
 
     const isValid = () => {
       return true;
     };
 
-    const clearUppy = () => {
-      uppy?.getFiles().forEach((file) => {
-        uppy.removeFile(file.id);
-      });
-    };
-
     const deleteImage = () => {
       onChange(null);
-      clearUppy();
+      clearUppy(uppy);
     };
 
     useImperativeHandle(
@@ -70,7 +107,11 @@ const SvgControl = forwardRef(
         let base64Svg = encodeURIComponent(content);
         let dataUri = `data:image/svg+xml,${base64Svg}`;
 
-        onChange(dataUri);
+        if (validationDimensionsSvg(content, options)) {
+          onChange(dataUri);
+        } else {
+          clearUppy(uppyInstance);
+        }
       });
 
       setUppy(uppyInstance);
