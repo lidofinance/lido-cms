@@ -32,29 +32,17 @@ export const termsOfUse: CmsCollectionFile = {
     {
       name: "content",
       label: "Content",
-      widget: "list",
-      fields: [
-        {
-          name: "paragraph",
-          label: "Paragraph",
-          widget: "markdown",
-          modes: ["rich_text"],
-          buttons: [
-            "link",
-            "bold",
-            "heading-two",
-            "heading-three",
-            "heading-four",
-            "numbered-list",
-          ],
-          editor_components: [],
-        },
+      widget: "markdown",
+      modes: ["rich_text"],
+      buttons: [
+        "link",
+        "bold",
+        "heading-two",
+        "heading-three",
+        "heading-four",
+        "numbered-list",
       ],
-    },
-    {
-      name: "footerText",
-      label: "Footer text",
-      widget: "text",
+      editor_components: [],
     },
   ],
 };
