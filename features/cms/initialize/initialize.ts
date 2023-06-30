@@ -1,6 +1,11 @@
 import getConfig from "next/config";
 
-import { lidoLanding, ecosystemProjects, ecosystemConfig, validatorsProjects } from "./collections";
+import {
+  lidoLanding,
+  ecosystemProjects,
+  ecosystemConfig,
+  validatorsProjects,
+} from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
@@ -17,7 +22,12 @@ export const initializeCMS = () => {
       show_preview_links: false,
       media_folder: "public/img",
       public_folder: "img",
-      collections: [lidoLanding, ecosystemProjects, ecosystemConfig, validatorsProjects],
+      collections: [
+        lidoLanding,
+        ecosystemProjects,
+        ecosystemConfig,
+        validatorsProjects,
+      ],
     },
   });
 };
