@@ -41,7 +41,14 @@ const validationDimensionsSvg = (svgContent: string, options: any): boolean => {
   let svgWidth = svg.getAttribute("width");
   let svgHeight = svg.getAttribute("height");
 
-  console.log(svgWidth, svgHeight);
+  if (!svgWidth || !svgHeight) {
+    const viewBox = svg.getAttribute("viewBox");
+    if (viewBox) {
+      const parts = viewBox.split(' ');
+      svgWidth = svgWidth || parts[2];
+      svgHeight = svgHeight || parts[3];
+    }
+  }
 
   if (width && width !== svgWidth) check = false;
   if (height && height !== svgHeight) check = false;
