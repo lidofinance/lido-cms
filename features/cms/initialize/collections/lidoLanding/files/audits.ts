@@ -35,6 +35,7 @@ export const audits: CmsCollectionFile = {
           widget: "datetime",
           name: "dateInfo",
           label: "Date Info",
+          format: "MMM YYYY",
         },
         {
           widget: "svg",
