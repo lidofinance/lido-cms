@@ -22,9 +22,9 @@ export const validatorsProjects: CmsCollection = {
       options: {
         size: {
           width: 200,
-          height: 84
-        }
-      }
+          height: 84,
+        },
+      },
     } as unknown as CmsField,
     { label: "Name", name: "name", widget: "string" },
     { label: "Link", name: "link", widget: "string" },
