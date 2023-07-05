@@ -19,6 +19,12 @@ export const validatorsProjects: CmsCollection = {
       name: "logo",
       widget: "svg",
       hint: "The size of the image should be 200x84",
+      options: {
+        size: {
+          width: 200,
+          height: 84
+        }
+      }
     } as unknown as CmsField,
     { label: "Name", name: "name", widget: "string" },
     { label: "Link", name: "link", widget: "string" },
