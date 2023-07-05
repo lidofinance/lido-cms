@@ -10,22 +10,19 @@ export const audits: CmsCollectionFile = {
       widget: "list",
       name: "auditsList",
       label: "List of audits",
+      summary: "{{fields.info}}",
       fields: [
-        {
-          widget: "string",
-          name: "info",
-          label: "Info",
-        },
-        {
-          widget: "string",
-          name: "href",
-          label: "Link",
-        },
         {
           widget: "svg",
           name: "logo",
           label: "Logo",
           options: { size: { width: 160, height: 34 } },
+          hint: "The size of the image should be 160x34",
+        } as unknown as CmsField,
+        {
+          widget: "svg",
+          name: "networkLogo",
+          label: "Network Logo",
         } as unknown as CmsField,
         {
           widget: "string",
@@ -39,10 +36,15 @@ export const audits: CmsCollectionFile = {
           format: "MMM YYYY",
         },
         {
-          widget: "svg",
-          name: "networkLogo",
-          label: "Network Logo",
-        } as unknown as CmsField,
+          widget: "string",
+          name: "info",
+          label: "Info",
+        },
+        {
+          widget: "string",
+          name: "href",
+          label: "Link",
+        },
       ],
     },
   ],
