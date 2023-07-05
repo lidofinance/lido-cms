@@ -13,7 +13,7 @@ export const termsOfUse: CmsCollectionFile = {
       format: "MMMM DD, YYYY",
     },
     {
-      name: "content",
+      name: "body",
       label: "Content",
       widget: "markdown",
       modes: ["rich_text"],
