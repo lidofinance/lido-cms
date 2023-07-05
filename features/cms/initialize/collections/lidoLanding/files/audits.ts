@@ -25,6 +25,7 @@ export const audits: CmsCollectionFile = {
           widget: "svg",
           name: "logo",
           label: "Logo",
+          options: { size: { width: 160, height: 34 } },
         } as unknown as CmsField,
         {
           widget: "string",
