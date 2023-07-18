@@ -1,10 +1,11 @@
 import getConfig from "next/config";
 
 import {
-  lidoLanding,
-  ecosystemProjects,
-  ecosystemConfig,
-  validatorsProjects,
+  lidoLandingCollection,
+  ecosystemProjectsCollection,
+  ecosystemConfigCollection,
+  validatorsProjectsCollection,
+  registerEcosystemRenderer
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -23,11 +24,12 @@ export const initializeCMS = () => {
       media_folder: "public/img",
       public_folder: "img",
       collections: [
-        lidoLanding,
-        ecosystemProjects,
-        ecosystemConfig,
-        validatorsProjects,
+        lidoLandingCollection,
+        ecosystemProjectsCollection,
+        ecosystemConfigCollection,
+        validatorsProjectsCollection,
       ],
     },
   });
+  registerEcosystemRenderer();
 };

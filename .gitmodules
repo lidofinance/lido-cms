@@ -1,0 +1,5 @@
+[submodule "lido-content"]
+	path = lido-content
+	url = git@github.com:lidofinance/lido-content.git
+    ignore = all
+    shallow = true

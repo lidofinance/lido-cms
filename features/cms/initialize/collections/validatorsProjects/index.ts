@@ -1,6 +1,6 @@
 import type { CmsCollection, CmsField } from "netlify-cms-core";
 
-export const validatorsProjects: CmsCollection = {
+export const validatorsProjectsCollection: CmsCollection = {
   name: "validators-projects",
   label: "Validators (Projects)",
   folder: "lido-landing/validators/projects",
