@@ -5,6 +5,7 @@ import {
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
+  registerFaqPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -25,6 +26,9 @@ export default function Tmp() {
       registerSvgWidget();
       registerUuidWidget();
       registerInfoWidget();
+
+      // Previews
+      registerFaqPreviewTemplate();
     })();
   }, []);
 
