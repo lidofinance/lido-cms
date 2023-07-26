@@ -1,7 +1,9 @@
 import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
 
+export const FILE_NAME = "ecosystem";
+
 export const ecosystem: CmsCollectionFile = {
-  name: "ecosystem",
+  name: FILE_NAME,
   label: "Ecosystem",
   description: "Ecosystem page",
   file: "lido-landing/ecosystem/ecosystem.md",
