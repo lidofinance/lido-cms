@@ -1,7 +1,9 @@
 import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
 
+export const FILE_NAME = "validators";
+
 export const validators: CmsCollectionFile = {
-  name: "validators",
+  name: FILE_NAME,
   label: "Validators",
   description: "Validators info",
   file: "lido-landing/validators/validators.md",
