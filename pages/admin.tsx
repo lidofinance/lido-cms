@@ -8,6 +8,7 @@ import {
   registerFaqPreviewTemplate,
   registerValidatorsPreviewTemplate,
   registerEcosystemPreviewTemplate,
+  registerAuditsPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -33,6 +34,7 @@ export default function Tmp() {
       registerFaqPreviewTemplate();
       registerValidatorsPreviewTemplate();
       registerEcosystemPreviewTemplate();
+      registerAuditsPreviewTemplate();
     })();
   }, []);
 
