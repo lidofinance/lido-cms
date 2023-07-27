@@ -28,7 +28,6 @@ export const ProjectConfigEcosystemPreview = ({
 }: PreviewTemplateComponentProps) => {
   const { tokens, categories, networks }: Data = entry.getIn(["data"]).toJS();
 
-  console.log(tokens, categories, networks);
   return (
     <>
       <Bold>Tokens:</Bold>

@@ -20,17 +20,15 @@ export const FaqPreview = ({ entry }: PreviewTemplateComponentProps) => {
   return (
     <>
       {categories?.map((category) => (
-        <Wrapper>
+        <Wrapper key={category.name}>
           <Text>
             <Bold>category name:</Bold> {category.name}
           </Text>
           {category["q&a"]?.map(({ question, answer }) => (
-            <>
-              <Box>
-                <Text>question: {question}</Text>
-                <Text>answer: {answer}</Text>
-              </Box>
-            </>
+            <Box key={question}>
+              <Text>question: {question}</Text>
+              <Text>answer: {answer}</Text>
+            </Box>
           ))}
         </Wrapper>
       ))}

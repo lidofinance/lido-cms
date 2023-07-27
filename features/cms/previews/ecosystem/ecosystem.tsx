@@ -4,7 +4,7 @@ import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
-import { Bold, Text, Line } from "./ecosystemStyles";
+import { Row, Bold, Text, Line } from "./ecosystemStyles";
 
 type Data = {
   mostPopular: string[];
@@ -57,7 +57,7 @@ export const EcosystemPreview = ({
       </Text>
       <Line />
       {[...Object.entries(pages)].map(([pageName, projects]) => (
-        <>
+        <Row key={pageName}>
           <Bold>{pageName}:</Bold>
           <Text>
             {pagesProjectsData?.[pageName]
@@ -70,7 +70,7 @@ export const EcosystemPreview = ({
                   .join(", ")
               : "...loading"}
           </Text>
-        </>
+        </Row>
       ))}
     </>
   );

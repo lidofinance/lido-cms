@@ -17,7 +17,6 @@ export const ProjectValidatorsPreview = ({
 }: PreviewTemplateComponentProps) => {
   const { logo, name, link }: Project = entry.getIn(["data"]).toJS();
 
-  console.log(logo, name, link);
   return (
     <>
       <Card href={link}>

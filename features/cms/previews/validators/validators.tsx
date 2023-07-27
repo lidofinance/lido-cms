@@ -4,7 +4,7 @@ import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
-import { Bold, Text } from "./validatorsStyles";
+import { Row, Bold, Text } from "./validatorsStyles";
 
 type Pages = Record<string, string[]>;
 
@@ -32,7 +32,7 @@ export const ValidatorsPreview = ({
   return (
     <>
       {[...Object.entries(pages)].map(([pageName, projects]) => (
-        <>
+        <Row key={pageName}>
           <Bold>{pageName}:</Bold>
           <Text>
             {projectsData?.[pageName]
@@ -44,7 +44,7 @@ export const ValidatorsPreview = ({
                   .join(", ")
               : "...loading"}
           </Text>
-        </>
+        </Row>
       ))}
     </>
   );
