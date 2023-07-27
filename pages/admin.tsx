@@ -10,6 +10,8 @@ import {
   registerEcosystemPreviewTemplate,
   registerAuditsPreviewTemplate,
   registerProjectEcosystemPreviewTemplate,
+  registerProjectConfigEcosystemPreviewTemplate,
+  registerProjectValidatorsPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -37,6 +39,8 @@ export default function Tmp() {
       registerEcosystemPreviewTemplate();
       registerAuditsPreviewTemplate();
       registerProjectEcosystemPreviewTemplate();
+      registerProjectConfigEcosystemPreviewTemplate();
+      registerProjectValidatorsPreviewTemplate();
     })();
   }, []);
 
