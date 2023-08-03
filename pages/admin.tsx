@@ -5,6 +5,13 @@ import {
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
+  registerFaqPreviewTemplate,
+  registerValidatorsPreviewTemplate,
+  registerEcosystemPreviewTemplate,
+  registerAuditsPreviewTemplate,
+  registerProjectEcosystemPreviewTemplate,
+  registerProjectConfigEcosystemPreviewTemplate,
+  registerProjectValidatorsPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -25,6 +32,15 @@ export default function Tmp() {
       registerSvgWidget();
       registerUuidWidget();
       registerInfoWidget();
+
+      // Previews
+      registerFaqPreviewTemplate();
+      registerValidatorsPreviewTemplate();
+      registerEcosystemPreviewTemplate();
+      registerAuditsPreviewTemplate();
+      registerProjectEcosystemPreviewTemplate();
+      registerProjectConfigEcosystemPreviewTemplate();
+      registerProjectValidatorsPreviewTemplate();
     })();
   }, []);
 
