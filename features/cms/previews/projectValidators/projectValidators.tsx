@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { VALIDATORS_PROJECTS_COLLECTION_NAME } from "features/cms/initialize/collections/validatorsProjects/validatorsProjects";
+import { validatorsProjects } from "features/cms/initialize/collections/validatorsProjects/validatorsProjects";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -29,7 +29,7 @@ export const ProjectValidatorsPreview = ({
 
 export const registerProjectValidatorsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    VALIDATORS_PROJECTS_COLLECTION_NAME,
+    validatorsProjects.name,
     withStyledComponentsRendered(ProjectValidatorsPreview)
   );
 };

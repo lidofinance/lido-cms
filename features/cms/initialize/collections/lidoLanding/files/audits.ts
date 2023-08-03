@@ -1,9 +1,7 @@
 import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
 
-export const FILE_NAME = "audits";
-
 export const audits: CmsCollectionFile = {
-  name: FILE_NAME,
+  name: "audits",
   label: "Audits",
   description: "Audits list",
   file: "lido-landing/audits.md",

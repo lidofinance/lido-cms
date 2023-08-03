@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files/validators";
+import { validators } from "features/cms/initialize/collections/lidoLanding/files/validators";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -52,7 +52,7 @@ export const ValidatorsPreview = ({
 
 export const registerValidatorsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    FILE_NAME,
+    validators.name,
     withStyledComponentsRendered(ValidatorsPreview)
   );
 };

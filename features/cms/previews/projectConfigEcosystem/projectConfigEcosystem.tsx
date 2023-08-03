@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { FILE_NAME } from "features/cms/initialize/collections/ecosystemConfig/files/project";
+import { project } from "features/cms/initialize/collections/ecosystemConfig/files/project";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -52,7 +52,7 @@ export const ProjectConfigEcosystemPreview = ({
 
 export const registerProjectConfigEcosystemPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    FILE_NAME,
+    project.name,
     withStyledComponentsRendered(ProjectConfigEcosystemPreview)
   );
 };

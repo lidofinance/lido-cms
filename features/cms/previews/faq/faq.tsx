@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files/faq";
+import { faq } from "features/cms/initialize/collections/lidoLanding/files/faq";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -38,7 +38,7 @@ export const FaqPreview = ({ entry }: PreviewTemplateComponentProps) => {
 
 export const registerFaqPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    FILE_NAME,
+    faq.name,
     withStyledComponentsRendered(FaqPreview)
   );
 };

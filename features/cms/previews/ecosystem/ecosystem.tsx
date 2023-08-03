@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files/ecosystem";
+import { ecosystem } from "features/cms/initialize/collections/lidoLanding/files/ecosystem";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -78,7 +78,7 @@ export const EcosystemPreview = ({
 
 export const registerEcosystemPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    FILE_NAME,
+    ecosystem.name,
     withStyledComponentsRendered(EcosystemPreview)
   );
 };

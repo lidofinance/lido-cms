@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { FILE_NAME } from "features/cms/initialize/collections/lidoLanding/files/audits";
+import { audits } from "features/cms/initialize/collections/lidoLanding/files/audits";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -46,7 +46,7 @@ export const AuditsPreview = ({ entry }: PreviewTemplateComponentProps) => {
 
 export const registerAuditsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    FILE_NAME,
+    audits.name,
     withStyledComponentsRendered(AuditsPreview)
   );
 };
