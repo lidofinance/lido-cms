@@ -3,6 +3,7 @@
 # Local development (files are saved locally)
 
 - Install dependencies with `yarn`.
+- Get `lido-landing` directory from [lido-content repo](https://github.com/lidofinance/lido-content) to root.
 - Run `yarn proxy` from the root directory of the above repository.
 - Run dev server with `yarn dev`.
 
