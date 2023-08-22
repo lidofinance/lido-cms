@@ -6,16 +6,18 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
 import { Wrapper, Text, Bold, Box } from "./faqStyles";
 
-type Categories = {
-  name?: string;
-  "q&a"?: {
-    question: string;
-    answer: string;
-  }[];
-}[];
+type Data = {
+  categories: {
+    name?: string;
+    "q&a"?: {
+      question: string;
+      answer: string;
+    }[];
+  }[] 
+};
 
 export const FaqPreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const categories: Categories = entry.getIn(["data", "categories"]).toJS();
+  const { categories }: Data = entry.getIn(["data"]).toJS();
 
   return (
     <>

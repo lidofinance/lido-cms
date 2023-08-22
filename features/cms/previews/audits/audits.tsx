@@ -14,20 +14,23 @@ import {
   Link,
 } from "./auditsStyles";
 
-type AuditsList = {
-  logo: string;
-  networkLogo: string;
-  networkInfo: string;
-  dateInfo: string;
-  info: string;
-  href: string;
-}[];
+type Data = {
+  auditsList: {
+    logo: string;
+    networkLogo: string;
+    networkInfo: string;
+    dateInfo: string;
+    info: string;
+    href: string;
+  }[]
+};
 
 export const AuditsPreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const auditsList: AuditsList = entry.getIn(["data", "auditsList"]).toJS();
+  const { auditsList }: Data = entry.getIn(["data"]).toJS();
+  
   return (
     <>
-      {auditsList.map((audit) => (
+      {auditsList?.map((audit) => (
         <Card key={audit.info}>
           <Logos>
             <Logo src={audit.logo} />
