@@ -6,7 +6,9 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
 import { Row, Bold, Text } from "./validatorsStyles";
 
-type Pages = Record<string, string[]>;
+type Data = {
+  pages?: Record<string, string[]>;
+};
 
 type ProjectsData = {
   pages?: Record<
@@ -26,7 +28,7 @@ export const ValidatorsPreview = ({
   entry,
   fieldsMetaData,
 }: PreviewTemplateComponentProps) => {
-  const pages: Pages = entry.getIn(["data", "pages"]).toJS();
+  const { pages = {} }: Data = entry.getIn(["data"]).toJS();
   const { pages: projectsData }: ProjectsData = fieldsMetaData.toJS();
 
   return (

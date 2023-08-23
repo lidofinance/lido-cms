@@ -31,16 +31,16 @@ export const ProjectConfigEcosystemPreview = ({
   return (
     <>
       <Bold>Tokens:</Bold>
-      {tokens.map((token) => (
+      {tokens?.map((token) => (
         <Card key={token.id}>
           <Logo src={token.logo} />
           <Text>{token.label}</Text>
         </Card>
       ))}
       <Bold>Categories:</Bold>
-      <Text>{categories.map((category) => category.label).join(", ")}</Text>
+      <Text>{categories?.map((category) => category.label).join(", ")}</Text>
       <Bold>Networks:</Bold>
-      {networks.map((network) => (
+      {networks?.map((network) => (
         <Card key={network.id}>
           <Logo src={network.logo} />
           <Text>{network.label}</Text>
