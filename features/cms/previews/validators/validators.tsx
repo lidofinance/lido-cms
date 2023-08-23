@@ -7,7 +7,7 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import { Row, Bold, Text } from "./validatorsStyles";
 
 type Data = {
-  pages?: Record<string, string[]>
+  pages?: Record<string, string[]>;
 };
 
 type ProjectsData = {

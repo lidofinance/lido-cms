@@ -13,7 +13,7 @@ type Data = {
       question: string;
       answer: string;
     }[];
-  }[] 
+  }[];
 };
 
 export const FaqPreview = ({ entry }: PreviewTemplateComponentProps) => {

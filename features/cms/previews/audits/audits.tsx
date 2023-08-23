@@ -22,12 +22,12 @@ type Data = {
     dateInfo: string;
     info: string;
     href: string;
-  }[]
+  }[];
 };
 
 export const AuditsPreview = ({ entry }: PreviewTemplateComponentProps) => {
   const { auditsList }: Data = entry.getIn(["data"]).toJS();
-  
+
   return (
     <>
       {auditsList?.map((audit) => (
