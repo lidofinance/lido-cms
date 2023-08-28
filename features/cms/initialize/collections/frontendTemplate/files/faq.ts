@@ -13,13 +13,13 @@ export const faq: CmsCollectionFile = {
       fields: [
         {
           widget: "string",
-          name: "name",
-          label: "Name",
+          name: "identification",
+          label: "Identification",
         },
         {
           widget: "list",
-          name: "q&a",
-          label: "Q&A",
+          name: "faq",
+          label: "FAQ",
           fields: [
             {
               name: "question",

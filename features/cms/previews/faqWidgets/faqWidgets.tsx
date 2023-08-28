@@ -7,8 +7,8 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import { Wrapper, Text, Bold, Box } from "./faqWidgetsStyles";
 
 type Pages = {
-  name?: string;
-  "q&a"?: {
+  identification?: string;
+  faq?: {
     question: string;
     answer: string;
   }[];
@@ -20,11 +20,11 @@ export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
   return (
     <>
       {pages?.map((pages) => (
-        <Wrapper key={pages.name}>
+        <Wrapper key={pages.identification}>
           <Text>
-            <Bold>category name:</Bold> {pages.name}
+            <Bold>Page identification:</Bold> {pages.identification}
           </Text>
-          {pages["q&a"]?.map(({ question, answer }) => (
+          {pages.faq?.map(({ question, answer }) => (
             <Box key={question}>
               <Text>question: {question}</Text>
               <Text>answer: {answer}</Text>
