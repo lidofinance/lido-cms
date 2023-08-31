@@ -14,10 +14,10 @@ type Data = {
       answer: string;
     }[];
   }[];
-}
+};
 
 export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const { pages } : Data = entry.getIn(["data"]).toJS();
+  const { pages }: Data = entry.getIn(["data"]).toJS();
 
   return (
     <>
