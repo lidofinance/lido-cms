@@ -6,16 +6,18 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
 import { Wrapper, Text, Bold, Box } from "./faqWidgetsStyles";
 
-type Pages = {
-  identification?: string;
-  faq?: {
-    question: string;
-    answer: string;
+type Data = {
+  pages: {
+    identification?: string;
+    faq?: {
+      question: string;
+      answer: string;
+    }[];
   }[];
-}[];
+}
 
 export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const pages: Pages = entry.getIn(["data", "pages"]).toJS();
+  const { pages } : Data = entry.getIn(["data"]).toJS();
 
   return (
     <>
