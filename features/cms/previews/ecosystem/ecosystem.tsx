@@ -37,7 +37,7 @@ export const EcosystemPreview = ({
   entry,
   fieldsMetaData,
 }: PreviewTemplateComponentProps) => {
-  const { pages, mostPopular }: Data = entry.getIn(["data"]).toJS();
+  const { pages = {}, mostPopular }: Data = entry.getIn(["data"]).toJS();
   const {
     pages: pagesProjectsData,
     mostPopular: mostPopularProjectsData,
