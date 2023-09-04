@@ -3,9 +3,7 @@
 # Local development (files are saved locally)
 
 - Install dependencies with `yarn`.
-- Get `lido-landing` directory from [lido-content repo](https://github.com/lidofinance/lido-content) to root.
-  - You should make it 'cause a current structure made for [lido-content repo](https://github.com/lidofinance/lido-content).
-  - Or you should change structure in [features/cms/initialize](features/cms/initialize) and [features/cms/previews](features/cms/previews)
+- To add content, copy the folders (of the desired projects) from the [content repository](https://github.com/lidofinance/lido-content) to the root. (optional)
 - Run `yarn proxy` from the root directory of the above repository.
 - Run dev server with `yarn dev`.
 
