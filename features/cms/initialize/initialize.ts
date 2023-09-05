@@ -5,6 +5,7 @@ import {
   ecosystemProjects,
   ecosystemConfig,
   validatorsProjects,
+  frontendTemplate,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -27,6 +28,7 @@ export const initializeCMS = () => {
         ecosystemProjects,
         ecosystemConfig,
         validatorsProjects,
+        frontendTemplate,
       ],
     },
   });

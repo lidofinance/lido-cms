@@ -3,6 +3,7 @@
 # Local development (files are saved locally)
 
 - Install dependencies with `yarn`.
+- To add content, copy the folders (of the desired projects) from the [content repository](https://github.com/lidofinance/lido-content) to the root. (optional)
 - Run `yarn proxy` from the root directory of the above repository.
 - Run dev server with `yarn dev`.
 

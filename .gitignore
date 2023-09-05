@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local content for local development
+/lido-landing
+/widget-frontend-template
+
+#ide
+.vscode
+.idea
