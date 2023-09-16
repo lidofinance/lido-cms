@@ -1,6 +1,7 @@
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 
-import { faq } from "features/cms/initialize/collections/frontendTemplate/files/faq";
+import { faq as faqFrontendTemplate } from "features/cms/initialize/collections/frontendTemplate/files/faq";
+import { faq as faqEthereumStakingWidget } from "features/cms/initialize/collections/ethereumStakingWidget/files/faq";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -40,7 +41,11 @@ export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
 
 export const registerFaqWidgetsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
-    faq.name,
+    faqFrontendTemplate.name,
+    withStyledComponentsRendered(FaqWidgetsPreview)
+  );
+  CMS.registerPreviewTemplate(
+    faqEthereumStakingWidget.name,
     withStyledComponentsRendered(FaqWidgetsPreview)
   );
 };
