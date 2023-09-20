@@ -11,6 +11,7 @@ type Data = {
   pages: {
     identification?: string;
     faq?: {
+      questionId: string;
       question: string;
       answer: string;
     }[];
@@ -27,8 +28,9 @@ export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
           <Text>
             <Bold>Page identification:</Bold> {pages.identification}
           </Text>
-          {pages.faq?.map(({ question, answer }) => (
+          {pages.faq?.map(({ questionId, question, answer }) => (
             <Box key={question}>
+              <Text>question ID: {questionId}</Text>
               <Text>question: {question}</Text>
               <Text>answer: {answer}</Text>
             </Box>
