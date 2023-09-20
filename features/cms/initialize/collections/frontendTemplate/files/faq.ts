@@ -27,6 +27,11 @@ export const faq: CmsCollectionFile = {
               widget: "string",
             },
             {
+              name: "questionId",
+              label: "Question Id",
+              widget: "string",
+            },
+            {
               name: "answer",
               label: "Answer",
               widget: "markdown",
