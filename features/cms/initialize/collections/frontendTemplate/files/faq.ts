@@ -1,7 +1,7 @@
 import type { CmsCollectionFile } from "netlify-cms-core";
 
 export const faq: CmsCollectionFile = {
-  name: "faq-on-widget-frontend-template",
+  name: "faq-on-frontend-template-widget",
   label: "FAQ on widget",
   description: "FAQ on widgets pages",
   file: "widget-frontend-template/faq.md",
