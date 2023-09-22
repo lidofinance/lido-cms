@@ -38,6 +38,7 @@ next-env.d.ts
 # local content for local development
 /lido-landing
 /widget-frontend-template
+/ethereum-staking-widget
 
 #ide
 .vscode

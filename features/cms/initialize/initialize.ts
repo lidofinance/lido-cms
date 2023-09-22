@@ -6,6 +6,7 @@ import {
   ecosystemConfig,
   validatorsProjects,
   frontendTemplate,
+  ethereumStakingWidget,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -29,6 +30,7 @@ export const initializeCMS = () => {
         ecosystemConfig,
         validatorsProjects,
         frontendTemplate,
+        ethereumStakingWidget,
       ],
     },
   });
