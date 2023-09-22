@@ -1,7 +1,7 @@
 import type { CmsCollectionFile } from "netlify-cms-core";
 
 export const faq: CmsCollectionFile = {
-  name: "faq-on-widget",
+  name: "faq-on-ethereum-staking-widget",
   label: "FAQ on widget",
   description: "FAQ on widgets pages",
   file: "ethereum-staking-widget/faq.md",
