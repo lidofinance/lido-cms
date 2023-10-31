@@ -33,9 +33,15 @@ export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
       </Text>
       {faq?.map(({ questionId, question, answer }) => (
         <Box key={question}>
-          <Text>question ID: {questionId}</Text>
-          <Text>question: {question}</Text>
-          <Text>answer: {answer}</Text>
+          <Text>
+            <Bold>question ID:</Bold> {questionId}
+          </Text>
+          <Text>
+            <Bold>question:</Bold> {question}
+          </Text>
+          <Text>
+            <Bold>answer:</Bold> {answer}
+          </Text>
         </Box>
       ))}
     </>
