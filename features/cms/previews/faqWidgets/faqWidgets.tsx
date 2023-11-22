@@ -29,8 +29,7 @@ export const FaqWidgetsPreview = ({ entry }: PreviewTemplateComponentProps) => {
   return (
     <>
       <Text>
-        <Bold>Page or Page + Tab identification:</Bold>{" "}
-        {pageIdentification}
+        <Bold>Page or Page + Tab identification:</Bold> {pageIdentification}
       </Text>
       {faq?.map(({ questionId, question, answer }) => (
         <Box key={question}>
