@@ -1,9 +1,10 @@
 import type { CmsCollection } from "netlify-cms-core";
 
-import { faq } from "./files/faq";
+import { indexPage } from "./files/indexPage";
+import { examplePage } from "./files/examplePage";
 
 export const frontendTemplate: CmsCollection = {
   name: "frontend-template",
-  label: "Frontend template",
-  files: [faq],
+  label: "Frontend Template",
+  files: [indexPage, examplePage],
 };
