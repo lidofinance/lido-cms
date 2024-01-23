@@ -47,6 +47,11 @@ export const project: CmsCollectionFile = {
           name: "label",
           widget: "string",
         },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+        },
       ],
     },
     {
