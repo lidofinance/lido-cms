@@ -4,3 +4,4 @@ export * from "./ecosystemConfig/ecosystemConfig";
 export * from "./ethereumStakingWidget/ethereumStakingWidget";
 export * from "./validatorsProjects/validatorsProjects";
 export * from "./frontendTemplate/frontendTemplate";
+export * from "./banners/banners";
