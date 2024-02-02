@@ -7,7 +7,7 @@ import {
   validatorsProjects,
   frontendTemplate,
   ethereumStakingWidget,
-  banners
+  banners,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -32,7 +32,7 @@ export const initializeCMS = () => {
         validatorsProjects,
         frontendTemplate,
         ethereumStakingWidget,
-        banners
+        banners,
       ],
     },
   });

@@ -10,7 +10,7 @@ export const banners: CmsCollection = {
   summary: `{{fields.projectName}}`,
   sortable_fields: [],
   editor: {
-    preview: false
+    preview: false,
   },
   fields: [
     {
@@ -29,18 +29,24 @@ export const banners: CmsCollection = {
         { label: "Title", name: "title", widget: "string" },
         { label: "Description", name: "description", widget: "string" },
         { label: "Link", name: "link", widget: "string" },
-        { label: "Cookie Name", name: "cookieName", widget: "string", pattern: ["^[a-z0-9_]+$", "field should contain only letters (lower case), numbers, and underscore"] },
+        {
+          label: "Cookie Name",
+          name: "cookieName",
+          widget: "string",
+          pattern: [
+            "^[a-z0-9_]+$",
+            "field should contain only letters (lower case), numbers, and underscore",
+          ],
+        },
         {
           widget: "list",
           name: "pages",
           label: "List of pages",
           label_singular: "Page",
           summary: "{{fields.path}}",
-          fields: [
-            { label: "Path", name: "path", widget: "string" },
-          ]
-        }
-      ]
+          fields: [{ label: "Path", name: "path", widget: "string" }],
+        },
+      ],
     },
   ],
 };
