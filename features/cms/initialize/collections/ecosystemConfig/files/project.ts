@@ -76,6 +76,7 @@ export const project: CmsCollectionFile = {
           name: "logo",
           widget: "svg",
         } as unknown as CmsField,
+        { label: "L2", name: "l2", widget: "boolean", default: false },
       ],
     },
   ],
