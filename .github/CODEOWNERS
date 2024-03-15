@@ -1,5 +1,2 @@
-# Code reviewers
-* @lidofinance/lido-ui
-
-# CI reviewers
+* @lidofinance/lido-webexp
 .github @lidofinance/review-gh-workflows
