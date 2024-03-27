@@ -47,6 +47,13 @@ export const ecosystemProjects: CmsCollection = {
       required: false,
     },
     {
+      label: "L2 Description",
+      name: "l2Description",
+      widget: "string",
+      required: false,
+    },
+    { label: "L2 Link", name: "l2Link", widget: "string", required: false },
+    {
       label: "Tokens",
       name: "tokens",
       widget: "relation",
