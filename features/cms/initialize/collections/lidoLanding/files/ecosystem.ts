@@ -79,8 +79,8 @@ export const ecosystem: CmsCollectionFile = {
           required: false,
         } as unknown as CmsField,
         {
-          label: "Solana",
-          name: "solana",
+          label: "L2",
+          name: "l2",
           widget: "relation",
           collection: "ecosystem-projects",
           searchFields: ["name"],
