@@ -10,7 +10,7 @@ export const vaultsInfo: CmsCollectionFile = {
       widget: "boolean",
       name: "urgentBanner",
       label: "Urgent Banner",
-      default: false
+      default: false,
     },
     {
       widget: "list",
@@ -32,13 +32,13 @@ export const vaultsInfo: CmsCollectionFile = {
           widget: "boolean",
           name: "urgent",
           label: "Urgent",
-          default: false
+          default: false,
         },
         {
           widget: "boolean",
           name: "hide",
           label: "hide",
-          default: false
+          default: false,
         },
       ],
     },

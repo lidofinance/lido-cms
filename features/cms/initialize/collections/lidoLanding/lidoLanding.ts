@@ -12,5 +12,14 @@ import { vaultsInfo } from "./files/vaultsInfo";
 export const lidoLanding: CmsCollection = {
   name: "lido-landing",
   label: "Lido landing",
-  files: [scorecard, ecosystem, faq, validators, termsOfUse, audits, l2Audits, vaultsInfo],
+  files: [
+    scorecard,
+    ecosystem,
+    faq,
+    validators,
+    termsOfUse,
+    audits,
+    l2Audits,
+    vaultsInfo,
+  ],
 };
