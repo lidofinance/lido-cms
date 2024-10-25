@@ -13,6 +13,7 @@ import {
   registerProjectConfigEcosystemPreviewTemplate,
   registerProjectValidatorsPreviewTemplate,
   registerFaqWidgetsPreviewTemplate,
+  registerStethInDefiProjectPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -43,6 +44,7 @@ export default function Tmp() {
       registerProjectConfigEcosystemPreviewTemplate();
       registerProjectValidatorsPreviewTemplate();
       registerFaqWidgetsPreviewTemplate();
+      registerStethInDefiProjectPreviewTemplate();
     })();
   }, []);
 

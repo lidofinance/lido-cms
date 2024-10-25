@@ -8,6 +8,8 @@ import {
   frontendTemplate,
   ethereumStakingWidget,
   banners,
+  stethInDefiProject,
+  stethInDefiConfig,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -33,6 +35,8 @@ export const initializeCMS = () => {
         frontendTemplate,
         ethereumStakingWidget,
         banners,
+        stethInDefiProject,
+        stethInDefiConfig,
       ],
     },
   });

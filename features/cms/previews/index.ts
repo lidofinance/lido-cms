@@ -6,3 +6,4 @@ export * from "./audits/audits";
 export * from "./projectEcosystem/projectEcosystem";
 export * from "./projectConfigEcosystem/projectConfigEcosystem";
 export * from "./projectValidators/projectValidators";
+export * from "./stethInDefiProject/stethInDefiProject";
