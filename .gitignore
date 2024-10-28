@@ -39,7 +39,8 @@ next-env.d.ts
 /lido-landing
 /widget-frontend-template
 /ethereum-staking-widget
+/lido-content
 
-#ide
+# ide
 .vscode
 .idea

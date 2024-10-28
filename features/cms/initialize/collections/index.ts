@@ -5,3 +5,5 @@ export * from "./ethereumStakingWidget/ethereumStakingWidget";
 export * from "./validatorsProjects/validatorsProjects";
 export * from "./frontendTemplate/frontendTemplate";
 export * from "./banners/banners";
+export * from "./stethInDefiConfig/stethInDefiConfig";
+export * from "./stethInDefiProject/stethInDefiProject";
