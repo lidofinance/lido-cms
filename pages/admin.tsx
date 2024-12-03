@@ -15,7 +15,7 @@ import {
   registerFaqWidgetsPreviewTemplate,
   registerStethInDefiProjectPreviewTemplate,
   registerMultichainProjectPreviewTemplate,
-  registerMultichainPreviewTemplate
+  registerMultichainPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {

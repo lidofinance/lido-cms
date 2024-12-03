@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div``;
 
-export const Card = styled.div<{ feature?: string, disable?: string }>`
+export const Card = styled.div<{ feature?: string; disable?: string }>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -48,12 +48,11 @@ export const Logo = styled.img`
   height: 200px;
 
   &::after {
-
   }
 `;
 
 export const Link = styled.span`
-  color: #0085FF;
+  color: #0085ff;
 `;
 
 export const Row = styled.div`
@@ -67,7 +66,11 @@ export const Row = styled.div`
   box-sizing: border-box;
 `;
 
-export const Button = styled.div<{ v2?: string, hiden?: string, disable?: string }>`
+export const Button = styled.div<{
+  v2?: string;
+  hiden?: string;
+  disable?: string;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;

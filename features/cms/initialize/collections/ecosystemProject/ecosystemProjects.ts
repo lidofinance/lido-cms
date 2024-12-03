@@ -52,8 +52,18 @@ export const ecosystemProjects: CmsCollection = {
       widget: "string",
       required: false,
     },
-    { label: "Multichain Link", name: "l2Link", widget: "string", required: false },
-    { label: "Multichain feature", name: "multichainFeature", widget: "boolean", required: false },
+    {
+      label: "Multichain Link",
+      name: "l2Link",
+      widget: "string",
+      required: false,
+    },
+    {
+      label: "Multichain feature",
+      name: "multichainFeature",
+      widget: "boolean",
+      required: false,
+    },
     {
       label: "Tokens",
       name: "tokens",

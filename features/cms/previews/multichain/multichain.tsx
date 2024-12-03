@@ -7,16 +7,17 @@ export const MultichainPreview = ({
   fieldsMetaData,
 }: PreviewTemplateComponentProps) => {
   const { multichainPage = [] } = entry.getIn(["data"]).toJS();
-  const { multichainPage: { ["multichain-projects"]: data = {} } = {} } = fieldsMetaData.toJS();
-  const namesList = multichainPage.map((id: string)=> data?.[id]?.name).filter((name: string) => name)
-  console.log(multichainPage)
+  const { multichainPage: { ["multichain-projects"]: data = {} } = {} } =
+    fieldsMetaData.toJS();
+  const namesList = multichainPage
+    .map((id: string) => data?.[id]?.name)
+    .filter((name: string) => name);
+  console.log(multichainPage);
   return (
     <>
       <div>
         <h3>Multichain Page</h3>
-        <p>
-          {namesList.join(", ")}
-        </p>
+        <p>{namesList.join(", ")}</p>
       </div>
     </>
   );

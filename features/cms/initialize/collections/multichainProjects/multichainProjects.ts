@@ -27,8 +27,13 @@ export const multichainProjects: CmsCollection = {
       widget: "object",
       collapsed: true,
       fields: [
-        { label: "Text", name: "text", widget: "string" },  
-        { label: "'Learn More' Link", name: "learnMoreLink", widget: "string", required: false },  
+        { label: "Text", name: "text", widget: "string" },
+        {
+          label: "'Learn More' Link",
+          name: "learnMoreLink",
+          widget: "string",
+          required: false,
+        },
       ],
     },
     { label: "TVL Key", name: "tvlId", widget: "string", required: false },
@@ -41,8 +46,18 @@ export const multichainProjects: CmsCollection = {
       collapsed: true,
       fields: [
         { label: "Token name", name: "tokenName", widget: "string" },
-        { label: "Buy link", name: "buyLink", widget: "string", required: false },
-        { label: "Swap link", name: "swapLink", widget: "string", required: false },
+        {
+          label: "Buy link",
+          name: "buyLink",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "Swap link",
+          name: "swapLink",
+          widget: "string",
+          required: false,
+        },
         { label: "Bridge link", name: "bridgeLink", widget: "string" },
       ],
     },
@@ -52,8 +67,18 @@ export const multichainProjects: CmsCollection = {
       widget: "object",
       collapsed: true,
       fields: [
-        { label: "Snapshot Vote Link", name: "snapshotVoteLink", widget: "string", required: false },
-        { label: "Deployed Addresses Link", name: "deployedAddressesLink", widget: "string", required: false },
+        {
+          label: "Snapshot Vote Link",
+          name: "snapshotVoteLink",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "Deployed Addresses Link",
+          name: "deployedAddressesLink",
+          widget: "string",
+          required: false,
+        },
       ],
     },
     {
