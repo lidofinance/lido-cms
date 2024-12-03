@@ -7,3 +7,4 @@ export * from "./frontendTemplate/frontendTemplate";
 export * from "./banners/banners";
 export * from "./stethInDefiConfig/stethInDefiConfig";
 export * from "./stethInDefiProject/stethInDefiProject";
+export * from "./multichainProjects/multichainProjects";

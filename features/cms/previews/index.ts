@@ -7,3 +7,5 @@ export * from "./projectEcosystem/projectEcosystem";
 export * from "./projectConfigEcosystem/projectConfigEcosystem";
 export * from "./projectValidators/projectValidators";
 export * from "./stethInDefiProject/stethInDefiProject";
+export * from "./multichainProject/multichainProject";
+export * from "./multichain/multichain";

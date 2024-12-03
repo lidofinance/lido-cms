@@ -8,6 +8,7 @@ import { audits } from "./files/audits";
 import { l2Audits } from "./files/l2Audits";
 import { validators } from "./files/validators";
 import { vaultsInfo } from "./files/vaultsInfo";
+import { multichain } from "./files/multichain";
 
 export const lidoLanding: CmsCollection = {
   name: "lido-landing",
@@ -21,5 +22,6 @@ export const lidoLanding: CmsCollection = {
     audits,
     l2Audits,
     vaultsInfo,
+    multichain,
   ],
 };
