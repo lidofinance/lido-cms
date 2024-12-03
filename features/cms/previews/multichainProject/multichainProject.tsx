@@ -26,6 +26,7 @@ export const MultichainProjectPreview = ({
     ecosystemProjects = [],
     tooltipLinks: {
       snapshotVoteLink = null,
+      necDecisionPostLink = null,
       deployedAddressesLink = null,
     } = {},
     getLinks: {
@@ -45,7 +46,11 @@ export const MultichainProjectPreview = ({
       <Wrapper>
         <Card feature={feature.toString()}>
           <InfoIcon
-            hiden={(!snapshotVoteLink && !deployedAddressesLink).toString()}
+            hiden={(
+              !snapshotVoteLink &&
+              !necDecisionPostLink &&
+              !deployedAddressesLink
+            ).toString()}
           >
             <svg
               width="24"

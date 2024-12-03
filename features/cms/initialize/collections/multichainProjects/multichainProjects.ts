@@ -74,6 +74,12 @@ export const multichainProjects: CmsCollection = {
           required: false,
         },
         {
+          label: "NEC decision post link",
+          name: "necDecisionPostLink",
+          widget: "string",
+          required: false,
+        },
+        {
           label: "Deployed Addresses Link",
           name: "deployedAddressesLink",
           widget: "string",
