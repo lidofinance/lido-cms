@@ -14,6 +14,8 @@ import {
   registerProjectValidatorsPreviewTemplate,
   registerFaqWidgetsPreviewTemplate,
   registerStethInDefiProjectPreviewTemplate,
+  registerMultichainProjectPreviewTemplate,
+  registerMultichainPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -45,6 +47,8 @@ export default function Tmp() {
       registerProjectValidatorsPreviewTemplate();
       registerFaqWidgetsPreviewTemplate();
       registerStethInDefiProjectPreviewTemplate();
+      registerMultichainProjectPreviewTemplate();
+      registerMultichainPreviewTemplate();
     })();
   }, []);
 

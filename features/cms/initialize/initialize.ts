@@ -10,6 +10,7 @@ import {
   banners,
   stethInDefiProject,
   stethInDefiConfig,
+  multichainProjects,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -37,6 +38,7 @@ export const initializeCMS = () => {
         banners,
         stethInDefiProject,
         stethInDefiConfig,
+        multichainProjects,
       ],
     },
   });
