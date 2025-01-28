@@ -81,8 +81,7 @@ export const StethInDefiProjectPreview = ({
     config =
       data.depositableTokenId?.["steth-in-defi-config"]?.[depositableTokenId];
   else if (!config && data?.networkId)
-    config =
-      data.networkId?.["steth-in-defi-config"]?.[networkId];
+    config = data.networkId?.["steth-in-defi-config"]?.[networkId];
   else if (!config && data?.additionalRewardsId)
     config =
       data.additionalRewardsId?.["steth-in-defi-config"]?.[
@@ -97,8 +96,7 @@ export const StethInDefiProjectPreview = ({
     config?.depositableTokens.find((item) => item.id === depositableTokenId) ??
     {};
   const { logo: networkLogo } =
-    config?.networks.find((item) => item.id === networkId) ??
-    {};
+    config?.networks.find((item) => item.id === networkId) ?? {};
   const additionalRewards =
     config?.additionalRewards?.filter((item) =>
       additionalRewardsId?.includes(item.id)
@@ -149,7 +147,7 @@ export const StethInDefiProjectPreview = ({
             <Row>
               <Label>Depositable Token</Label>
               <Block>
-                <img src={networkLogo} className={"networkLogo"}/>
+                <img src={networkLogo} className={"networkLogo"} />
                 <img src={depositableTokenLogo} />
                 <Text>{depositableTokenLabel}</Text>
               </Block>
