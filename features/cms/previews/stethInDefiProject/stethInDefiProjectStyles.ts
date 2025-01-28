@@ -69,6 +69,7 @@ export const Label = styled.span`
 `;
 
 export const Block = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -76,6 +77,14 @@ export const Block = styled.div`
   & > img {
     width: 36px;
     height: 36px;
+  }
+
+  & > img.networkLogo {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
   }
 `;
 

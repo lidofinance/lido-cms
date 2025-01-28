@@ -55,6 +55,30 @@ export const project: CmsCollectionFile = {
       ],
     },
     {
+      name: "networks",
+      label: "Networks",
+      widget: "list",
+      label_singular: "new network",
+      summary: "{{fields.label}}",
+      fields: [
+        {
+          name: "id",
+          widget: "uuid",
+          hide: true,
+        } as unknown as CmsField,
+        {
+          label: "Logo",
+          name: "logo",
+          widget: "svg",
+        } as unknown as CmsField,
+        {
+          label: "Label",
+          name: "label",
+          widget: "string",
+        },
+      ],
+    },
+    {
       name: "additionalRewards",
       label: "Additional Rewards",
       widget: "list",

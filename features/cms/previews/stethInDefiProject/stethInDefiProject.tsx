@@ -25,6 +25,7 @@ type Project = {
   curatorId: string;
   protocol?: string;
   depositableTokenId: string;
+  networkId: string;
   additionalRewardsId: string[];
   additionalRewardsLabel?: string;
   link: string;
@@ -65,6 +66,7 @@ export const StethInDefiProjectPreview = ({
     curatorId,
     protocol,
     depositableTokenId,
+    networkId,
     additionalRewardsId,
     additionalRewardsLabel,
     featureMode,
@@ -78,6 +80,9 @@ export const StethInDefiProjectPreview = ({
   else if (!config && data?.depositableTokenId)
     config =
       data.depositableTokenId?.["steth-in-defi-config"]?.[depositableTokenId];
+  else if (!config && data?.networkId)
+    config =
+      data.networkId?.["steth-in-defi-config"]?.[networkId];
   else if (!config && data?.additionalRewardsId)
     config =
       data.additionalRewardsId?.["steth-in-defi-config"]?.[
@@ -90,6 +95,9 @@ export const StethInDefiProjectPreview = ({
     config?.curators.find((item) => item.id === curatorId) ?? {};
   const { logo: depositableTokenLogo, label: depositableTokenLabel } =
     config?.depositableTokens.find((item) => item.id === depositableTokenId) ??
+    {};
+  const { logo: networkLogo } =
+    config?.networks.find((item) => item.id === networkId) ??
     {};
   const additionalRewards =
     config?.additionalRewards?.filter((item) =>
@@ -141,6 +149,7 @@ export const StethInDefiProjectPreview = ({
             <Row>
               <Label>Depositable Token</Label>
               <Block>
+                <img src={networkLogo} className={"networkLogo"}/>
                 <img src={depositableTokenLogo} />
                 <Text>{depositableTokenLabel}</Text>
               </Block>
