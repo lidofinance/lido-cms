@@ -71,6 +71,16 @@ export const stethInDefiProject: CmsCollection = {
       valueField: "depositableTokens.*.id",
       displayFields: ["depositableTokens.*.label"],
     } as unknown as CmsField,
+    {
+      label: "Network",
+      name: "networkId",
+      widget: "relation",
+      collection: "steth-in-defi-config",
+      file: "project-steth-in-defi-config",
+      searchFields: ["networks.*.label"],
+      valueField: "networks.*.id",
+      displayFields: ["networks.*.label"],
+    } as unknown as CmsField,
     { label: "TVL Key", name: "tvlId", widget: "string", required: false },
     {
       label: "Additional Rewards",
