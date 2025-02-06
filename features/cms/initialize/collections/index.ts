@@ -8,3 +8,4 @@ export * from "./banners/banners";
 export * from "./stethInDefiConfig/stethInDefiConfig";
 export * from "./stethInDefiProject/stethInDefiProject";
 export * from "./multichainProjects/multichainProjects";
+export * from "./teaserVideo/teaserVideo";

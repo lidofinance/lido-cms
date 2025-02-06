@@ -11,6 +11,7 @@ import {
   stethInDefiProject,
   stethInDefiConfig,
   multichainProjects,
+  teaserVideo,
 } from "./collections";
 
 const { publicRuntimeConfig } = getConfig();
@@ -39,6 +40,7 @@ export const initializeCMS = () => {
         stethInDefiProject,
         stethInDefiConfig,
         multichainProjects,
+        teaserVideo,
       ],
     },
   });
