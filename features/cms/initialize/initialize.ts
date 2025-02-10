@@ -8,6 +8,7 @@ import {
   frontendTemplate,
   ethereumStakingWidget,
   banners,
+  emergencyBanner,
   stethInDefiProject,
   stethInDefiConfig,
   multichainProjects,
@@ -41,6 +42,7 @@ export const initializeCMS = () => {
         stethInDefiConfig,
         multichainProjects,
         teaserVideo,
+        emergencyBanner,
       ],
     },
   });
