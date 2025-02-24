@@ -1,29 +1,15 @@
-import React, { useImperativeHandle, forwardRef, ReactNode } from "react";
-import { CmsWidgetControlProps } from "decap-cms-core";
-
-import { Wrapper, Block, Text, Link } from "./infoStyles";
+import { CmsWidgetControlProps } from 'decap-cms-core'
+import React, { forwardRef, ReactNode } from 'react'
+import styles from './infoStyles.module.css'
 
 const InfoControl = forwardRef(
   (
-    { classNameWrapper, field }: CmsWidgetControlProps<string | null>,
+    { classNameWrapper, field, value }: CmsWidgetControlProps<string | null>,
     refComponent
   ) => {
     let data = field.get("data");
-
-    const isValid = () => {
-      return true;
-    };
-
-    useImperativeHandle(
-      refComponent,
-      () => ({
-        isValid,
-      }),
-      []
-    );
-
     return (
-      <Wrapper className={classNameWrapper}>
+      <div ref={refComponent} className={styles.wrapper}>
         {data &&
           data.map((infoBlock: any) => {
             if (!infoBlock) return null;
@@ -32,7 +18,7 @@ const InfoControl = forwardRef(
             const linksData = infoBlock.get("links");
 
             const description = descriptionData ? (
-              <Text>{descriptionData ?? ""}</Text>
+              <p className={styles.text}>{descriptionData ?? ""}</p>
             ) : null;
 
             const links: ReactNode[] = [];
@@ -42,19 +28,24 @@ const InfoControl = forwardRef(
 
               if (!label || !href) return null;
 
-              links.push(<Link href={href}>{label}</Link>);
+              links.push(<a target="_blank" className={styles.link} href={href}>{label}</a>);
             });
 
             return description || links.length ? (
-              <Block>
+              <div className={styles.block}>
                 {description}
                 {links}
-              </Block>
+              </div>
             ) : null;
           })}
-      </Wrapper>
+      </div>
     );
+
   }
 );
 
-export const registerInfoWidget = () => CMS.registerWidget("info", InfoControl);
+
+export const registerInfoWidget = () => {
+  //console.log(CMS.registerWidget)
+  CMS.registerWidget("info", InfoControl);
+}

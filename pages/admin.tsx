@@ -1,5 +1,6 @@
+import { is } from 'immutable'
 import Script from 'next/script'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   initializeCMS,
   registerScorecardTable,
@@ -20,14 +21,16 @@ import {
 } from 'features/cms'
 
 export default function Tmp() {
+
   useEffect(() => {
     //@ts-ignore need to set it here before downloading CMS
     window.CMS_MANUAL_INIT = true
   }, [])
-  const initAll = (async () => {
 
-    const CMS = (await import('decap-cms')).default
-    globalThis.CMS = window.CMS
+  const initAll = (async () => {
+    //const CMS = (await import('decap-cms')).default
+    //console.log(CMS, window.CMS)
+    globalThis.CMS = CMS
 
     //initialization CMS
     initializeCMS()
@@ -57,14 +60,16 @@ export default function Tmp() {
   })
 
   return <>
-    {/*Could not bypass the issue of importing package directly. Solution from https://github.com/decaporg/decap-cms/issues/6965#issuecomment-2376344845*/}
-    <Script
-      src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"
-      strategy="lazyOnload"
-      onLoad={async () => {
-        await initAll()
 
-      }}
-    />
+      {/*Could not bypass the issue of importing package directly. Solution from https://github.com/decaporg/decap-cms/issues/6965#issuecomment-2376344845*/}
+      <Script
+        src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.2/dist/decap-cms.js"
+        strategy="lazyOnload"
+        onLoad={async () => {
+          await initAll()
+
+        }}
+      />
+
   </>
 }

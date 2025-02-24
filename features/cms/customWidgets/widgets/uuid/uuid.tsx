@@ -84,5 +84,6 @@ const UuidPreview = ({
   return <div ref={ref}>{value ?? ''}</div>
 }
 
-export const registerUuidWidget = () =>
+export const registerUuidWidget = () => {
   CMS.registerWidget('uuid', UuidControl, UuidPreview)
+}
