@@ -1,4 +1,4 @@
-import type { CmsCollectionFile } from "netlify-cms-core";
+import type { CmsCollectionFile } from "decap-cms-core";
 
 export const wrapAndUnwrapPage: CmsCollectionFile = {
   name: "faq-wrap-and-unwrap-page",

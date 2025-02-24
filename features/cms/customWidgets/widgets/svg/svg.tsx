@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import Uppy, { UppyFile } from "@uppy/core";
 import { DragDrop } from "@uppy/react";
-import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
+import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "decap-cms-core";
 
 import "@uppy/core/dist/style.css";
 import "@uppy/core/dist/style.min.css";

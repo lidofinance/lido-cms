@@ -1,4 +1,4 @@
-import type { CmsCollectionFile } from "netlify-cms-core";
+import type { CmsCollectionFile } from "decap-cms-core";
 
 export const withdrawalsPageRequestTab: CmsCollectionFile = {
   name: "faq-withdrawals-request-page",

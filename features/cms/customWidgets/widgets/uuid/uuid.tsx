@@ -4,20 +4,20 @@ import React, {
   forwardRef,
   useRef,
   RefObject,
-} from "react";
-import { v4 as uuidv4 } from "uuid";
-import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
+} from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import { CmsWidgetControlProps, CmsWidgetPreviewProps } from 'decap-cms-core'
 
 const visibilityElement = (
-  display: "block" | "none",
+  display: 'block' | 'none',
   ref: RefObject<HTMLDivElement>
 ) => {
-  const { current } = ref;
-  if (!current) return;
-  const element = current.parentElement;
-  if (!element) return;
-  element.style.display = display;
-};
+  const { current } = ref
+  if (!current) return
+  const element = current.parentElement
+  if (!element) return
+  element.style.display = display
+}
 
 const UuidControl = forwardRef(
   (
@@ -29,12 +29,12 @@ const UuidControl = forwardRef(
     }: CmsWidgetControlProps<string | null>,
     refComponent
   ) => {
-    let hide = field.get("hide");
-    let ref = useRef<HTMLDivElement | null>(null);
+    let hide = field.get('hide')
+    let ref = useRef<HTMLDivElement | null>(null)
 
     const isValid = () => {
-      return true;
-    };
+      return true
+    }
 
     useImperativeHandle(
       refComponent,
@@ -42,47 +42,47 @@ const UuidControl = forwardRef(
         isValid,
       }),
       []
-    );
+    )
 
     useEffect(() => {
-      if (value) return;
-      const uuid = uuidv4();
-      onChange(uuid);
-    }, []);
+      if (value) return
+      const uuid = uuidv4()
+      onChange(uuid)
+    }, [])
 
     useEffect(() => {
       if (hide) {
-        visibilityElement("none", ref);
+        visibilityElement('none', ref)
       } else {
-        visibilityElement("block", ref);
+        visibilityElement('block', ref)
       }
-    }, [hide]);
+    }, [hide])
 
     return (
       <div ref={ref} className={classNameWrapper}>
-        {value ?? ""}
+        {value ?? ''}
       </div>
-    );
+    )
   }
-);
+)
 
 const UuidPreview = ({
-  value,
-  field,
-}: CmsWidgetPreviewProps<string | null>) => {
-  let hide = field.get("hide");
-  let ref = useRef<HTMLDivElement | null>(null);
+                       value,
+                       field,
+                     }: CmsWidgetPreviewProps<string | null>) => {
+  let hide = field.get('hide')
+  let ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     if (hide) {
-      visibilityElement("none", ref);
+      visibilityElement('none', ref)
     } else {
-      visibilityElement("block", ref);
+      visibilityElement('block', ref)
     }
-  }, [hide]);
+  }, [hide])
 
-  return <div ref={ref}>{value ?? ""}</div>;
-};
+  return <div ref={ref}>{value ?? ''}</div>
+}
 
 export const registerUuidWidget = () =>
-  CMS.registerWidget("uuid", UuidControl, UuidPreview);
+  CMS.registerWidget('uuid', UuidControl, UuidPreview)

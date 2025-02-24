@@ -19,15 +19,21 @@ const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
   CMS.init({
     config: {
+      //backend: {
+      //  name: "github",
+      //  repo: publicRuntimeConfig.githubRepo,
+      //  branch: publicRuntimeConfig.githubBranch,
+      //  base_url: publicRuntimeConfig.baseUrl,
+      //},
+
+
       backend: {
-        name: "github",
-        repo: publicRuntimeConfig.githubRepo,
-        branch: publicRuntimeConfig.githubBranch,
-        base_url: publicRuntimeConfig.baseUrl,
+        name: 'git-gateway',
+        branch: 'main',
       },
       local_backend: true,
-      publish_mode: "editorial_workflow",
-      show_preview_links: false,
+     // publish_mode: "editorial_workflow",
+     // show_preview_links: false,
       media_folder: "public/img",
       public_folder: "img",
       collections: [
