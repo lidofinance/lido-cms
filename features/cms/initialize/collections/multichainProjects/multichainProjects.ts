@@ -37,6 +37,7 @@ export const multichainProjects: CmsCollection = {
       ],
     },
     { label: "TVL Key", name: "tvlId", widget: "string", required: false },
+    { label: "Defi Llama Link", name: "defiLlamaLink", widget: "string" },
     { label: "Network Type", name: "networkType", widget: "string" },
     { label: "Stack", name: "stack", widget: "string" },
     {
