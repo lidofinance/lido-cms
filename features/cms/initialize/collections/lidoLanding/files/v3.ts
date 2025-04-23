@@ -67,6 +67,5 @@ export const v3: CmsCollectionFile = {
         },
       ],
     },
-
   ],
 };
