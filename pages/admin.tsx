@@ -5,6 +5,7 @@ import {
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
+  registerReadonlyAfterCreationWidget,
   registerFaqPreviewTemplate,
   registerValidatorsPreviewTemplate,
   registerEcosystemPreviewTemplate,
@@ -37,6 +38,7 @@ export default function Tmp() {
       registerSvgWidget();
       registerUuidWidget();
       registerInfoWidget();
+      registerReadonlyAfterCreationWidget();
 
       // Previews
       registerFaqPreviewTemplate();

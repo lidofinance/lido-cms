@@ -14,9 +14,14 @@ export const featureFlags: CmsCollectionFile = {
         {
           label: "Flag Key",
           name: "name",
-          widget: "string",
-          hint: "Technical key for the feature flag (e.g., 'new-feature')",
-        },
+          widget: "readonly-after-creation",
+          hint: "⚠️ Important: Technical flag name (e.g., 'new-feature'). CANNOT BE CHANGED after creation! Used in code.",
+          pattern: [
+            "^[a-z0-9][a-z0-9-]*[a-z0-9]$|^[a-z0-9]$",
+            "Only lowercase letters, numbers and hyphens. Must start and end with a letter or number",
+          ],
+          required: true,
+        } as CmsField,
         {
           label: "Description",
           name: "description",
