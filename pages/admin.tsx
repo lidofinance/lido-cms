@@ -5,6 +5,7 @@ import {
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
+  registerReadonlyAfterCreationWidget,
   registerFaqPreviewTemplate,
   registerValidatorsPreviewTemplate,
   registerEcosystemPreviewTemplate,
@@ -16,6 +17,7 @@ import {
   registerStethInDefiProjectPreviewTemplate,
   registerMultichainProjectPreviewTemplate,
   registerMultichainPreviewTemplate,
+  registerFeatureFlagPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -36,6 +38,7 @@ export default function Tmp() {
       registerSvgWidget();
       registerUuidWidget();
       registerInfoWidget();
+      registerReadonlyAfterCreationWidget();
 
       // Previews
       registerFaqPreviewTemplate();
@@ -49,6 +52,7 @@ export default function Tmp() {
       registerStethInDefiProjectPreviewTemplate();
       registerMultichainProjectPreviewTemplate();
       registerMultichainPreviewTemplate();
+      registerFeatureFlagPreviewTemplate();
     })();
   }, []);
 

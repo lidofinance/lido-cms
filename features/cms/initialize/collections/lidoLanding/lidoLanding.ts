@@ -11,6 +11,7 @@ import { vaultsInfo } from "./files/vaultsInfo";
 import { multichain } from "./files/multichain";
 import { nodeOperators } from "./files/nodeOperators";
 import { v3 } from "./files/v3";
+import { featureFlags } from "./files/featureFlags";
 
 export const lidoLanding: CmsCollection = {
   name: "lido-landing",
@@ -27,5 +28,6 @@ export const lidoLanding: CmsCollection = {
     multichain,
     nodeOperators,
     v3,
+    featureFlags,
   ],
 };

@@ -9,3 +9,4 @@ export * from "./projectValidators/projectValidators";
 export * from "./stethInDefiProject/stethInDefiProject";
 export * from "./multichainProject/multichainProject";
 export * from "./multichain/multichain";
+export * from "./featureFlag/featureFlag";
