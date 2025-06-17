@@ -65,6 +65,11 @@ export const v3: CmsCollectionFile = {
           name: "feeStructure",
           widget: "string",
         },
+        {
+          label: "Audits",
+          name: "audits",
+          widget: "string",
+        },
       ],
     },
   ],
