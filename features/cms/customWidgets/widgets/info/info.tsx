@@ -1,5 +1,5 @@
 import React, { useImperativeHandle, forwardRef, ReactNode } from "react";
-import { CmsWidgetControlProps } from "netlify-cms-core";
+import { CmsWidgetControlProps } from "decap-cms-core";
 
 import { Wrapper, Block, Text, Link } from "./infoStyles";
 

@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 import { multichainProjects } from "features/cms/initialize/collections/";
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import {

@@ -6,11 +6,11 @@ import React, {
   RefObject,
 } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
+import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "decap-cms-core";
 
 const visibilityElement = (
   display: "block" | "none",
-  ref: RefObject<HTMLDivElement>
+  ref: RefObject<HTMLDivElement | null>
 ) => {
   const { current } = ref;
   if (!current) return;
@@ -65,6 +65,8 @@ const UuidControl = forwardRef(
     );
   }
 );
+
+UuidControl.displayName = "UuidControl";
 
 const UuidPreview = ({
   value,

@@ -1,4 +1,4 @@
-import type { CmsCollection, CmsField } from "netlify-cms-core";
+import type { CmsCollection, CmsField } from "decap-cms-core";
 
 export const ecosystemProjects: CmsCollection = {
   name: "ecosystem-projects",

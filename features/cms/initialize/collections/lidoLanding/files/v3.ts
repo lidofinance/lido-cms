@@ -1,4 +1,4 @@
-import type { CmsCollectionFile } from "netlify-cms-core";
+import type { CmsCollectionFile } from "decap-cms-core";
 
 export const variantsList = [
   { label: "Success", value: "success" },

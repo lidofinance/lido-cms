@@ -23,7 +23,7 @@ import {
 export default function Tmp() {
   useEffect(() => {
     (async () => {
-      const CMS = (await import("netlify-cms-app")).default;
+      const CMS = (await import("decap-cms-app")).default;
       globalThis.CMS = CMS;
 
       // initialization CMS

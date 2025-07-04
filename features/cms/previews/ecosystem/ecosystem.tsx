@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { ecosystem } from "features/cms/initialize/collections/lidoLanding/files/ecosystem";
 

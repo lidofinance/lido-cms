@@ -1,4 +1,4 @@
-import type { CmsCollectionFile, CmsField } from "netlify-cms-core";
+import type { CmsCollectionFile, CmsField } from "decap-cms-core";
 
 export const validators: CmsCollectionFile = {
   name: "validators",

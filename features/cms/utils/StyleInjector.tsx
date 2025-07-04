@@ -6,7 +6,7 @@ import React, {
   ComponentType,
 } from "react";
 import { StyleSheetManager } from "styled-components";
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 interface StyleInjectorProps {
   children: ReactNode;

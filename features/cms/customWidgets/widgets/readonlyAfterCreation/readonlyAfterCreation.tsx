@@ -4,7 +4,7 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
+import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "decap-cms-core";
 import styled from "styled-components";
 
 const ReadOnlyField = styled.div`

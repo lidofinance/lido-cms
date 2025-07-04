@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=20.0.0 <21.0.0"
+    "node": ">=22.0.0 <23.0.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "proxy": "netlify-cms-proxy-server",
+    "proxy": "decap-server",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier -c .",
@@ -17,38 +17,46 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "@lidofinance/api-logger": "^0.20.0",
-    "@lidofinance/api-metrics": "^0.20.0",
-    "@lidofinance/next-api-wrapper": "^0.20.0",
-    "@lidofinance/next-cache-files-middleware": "^0.18.0",
-    "@lidofinance/next-ip-rate-limit": "^0.20.0",
-    "@lidofinance/next-pages": "^0.20.0",
-    "@lidofinance/rpc": "^0.20.0",
-    "@next/font": "13.1.1",
-    "@types/node": "^20.0.0",
-    "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.10",
-    "@types/styled-components": "^5.1.26",
-    "@uppy/react": "^3.1.2",
-    "eslint": "8.31.0",
-    "eslint-config-next": "13.1.1",
+    "@lidofinance/api-logger": "^0.51.0",
+    "@lidofinance/api-metrics": "^0.51.0",
+    "@lidofinance/next-api-wrapper": "^0.51.0",
+    "@lidofinance/next-cache-files-middleware": "^0.51.0",
+    "@lidofinance/next-ip-rate-limit": "^0.51.0",
+    "@lidofinance/next-pages": "^0.51.0",
+    "@lidofinance/rpc": "^0.51.0",
+    "@types/node": "^20.19.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/styled-components": "^5.1.34",
+    "@uppy/react": "^4.4.0",
+    "eslint": "^9.30.1",
+    "eslint-config-next": "^15.3.5",
     "js-yaml": "^4.1.0",
-    "nanoid": "^4.0.0",
-    "netlify-cms-app": "^2.15.72",
-    "next": "13.1.1",
-    "octokit": "^2.0.14",
-    "prom-client": "^14.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^6.0.0-rc.1",
-    "typescript": "4.9.4",
-    "uppy": "^3.9.1",
-    "uuid": "^9.0.0"
+    "nanoid": "^5.1.5",
+    "decap-cms-app": "^3.7.1",
+    "next": "^15.3.5",
+    "octokit": "^5.0.3",
+    "prom-client": "^15.1.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "styled-components": "^6.1.19",
+    "typescript": "^5.8.3",
+    "@uppy/core": "^4.4.7",
+    "uppy": "^4.18.0",
+    "uuid": "^11.1.0",
+    "redux": "^5.0.1"
+  },
+  "resolutions": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "prom-client": "^15.1.3",
+    "@uppy/core": "^4.4.7"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
-    "@types/uuid": "^9.0.1",
-    "netlify-cms-proxy-server": "^1.3.24",
-    "prettier": "^2.8.2"
-  }
+    "@types/uuid": "^10.0.0",
+    "decap-server": "^3.3.0",
+    "prettier": "^3.6.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
