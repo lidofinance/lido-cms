@@ -57,4 +57,6 @@ const InfoControl = forwardRef(
   }
 );
 
+InfoControl.displayName = "InfoControl";
+
 export const registerInfoWidget = () => CMS.registerWidget("info", InfoControl);
