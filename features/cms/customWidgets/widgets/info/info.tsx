@@ -6,7 +6,7 @@ import { Wrapper, Block, Text, Link } from "./infoStyles";
 const InfoControl = forwardRef(
   (
     { classNameWrapper, field }: CmsWidgetControlProps<string | null>,
-    refComponent
+    refComponent,
   ) => {
     let data = field.get("data");
 
@@ -19,7 +19,7 @@ const InfoControl = forwardRef(
       () => ({
         isValid,
       }),
-      []
+      [],
     );
 
     return (
@@ -54,7 +54,7 @@ const InfoControl = forwardRef(
           })}
       </Wrapper>
     );
-  }
+  },
 );
 
 InfoControl.displayName = "InfoControl";

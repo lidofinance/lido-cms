@@ -57,7 +57,7 @@ const validationDimensionsSvg = (svgContent: string, options: any): boolean => {
     alert(
       `The image dimensions must be: 
 ${width ? `width: ${width}px` : ""}
-${height ? `height: ${height}px` : ""}`
+${height ? `height: ${height}px` : ""}`,
     );
 
   return check;
@@ -77,7 +77,7 @@ const SvgControl = forwardRef(
       onChange,
       classNameWrapper,
     }: CmsWidgetControlProps<string | null>,
-    ref
+    ref,
   ) => {
     const [uppy, setUppy] = useState<null | Uppy>(null);
 
@@ -97,7 +97,7 @@ const SvgControl = forwardRef(
       () => ({
         isValid,
       }),
-      []
+      [],
     );
 
     useEffect(() => {
@@ -146,7 +146,7 @@ const SvgControl = forwardRef(
         )}
       </div>
     );
-  }
+  },
 );
 
 SvgControl.displayName = "SvgControl";

@@ -30,6 +30,6 @@ export const ProjectValidatorsPreview = ({
 export const registerProjectValidatorsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     validatorsProjects.name,
-    withStyledComponentsRendered(ProjectValidatorsPreview)
+    withStyledComponentsRendered(ProjectValidatorsPreview),
   );
 };

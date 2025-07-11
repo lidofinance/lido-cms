@@ -41,6 +41,6 @@ export const FaqPreview = ({ entry }: PreviewTemplateComponentProps) => {
 export const registerFaqPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     faq.name,
-    withStyledComponentsRendered(FaqPreview)
+    withStyledComponentsRendered(FaqPreview),
   );
 };

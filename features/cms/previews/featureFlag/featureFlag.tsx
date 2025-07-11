@@ -98,7 +98,7 @@ export const FeatureFlagPreview = ({
 export const registerFeatureFlagPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     featureFlags.name,
-    withStyledComponentsRendered(FeatureFlagPreview)
+    withStyledComponentsRendered(FeatureFlagPreview),
   );
 };
 

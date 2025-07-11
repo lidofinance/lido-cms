@@ -99,7 +99,7 @@ export const StethInDefiProjectPreview = ({
     config?.networks.find((item) => item.id === networkId) ?? {};
   const additionalRewards =
     config?.additionalRewards?.filter((item) =>
-      additionalRewardsId?.includes(item.id)
+      additionalRewardsId?.includes(item.id),
     ) ?? [];
   const [additionalRewardsLogos, additionalRewardsLabels] =
     additionalRewards?.reduce<[string[], string[]]>(
@@ -108,7 +108,7 @@ export const StethInDefiProjectPreview = ({
         b.push(item.label);
         return [a, b];
       },
-      [[], []]
+      [[], []],
     );
   const { active: activeFeatureMode, image: imageFeatureMode } = featureMode;
   const {
@@ -178,6 +178,6 @@ export const StethInDefiProjectPreview = ({
 export const registerStethInDefiProjectPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     stethInDefiProject.name,
-    withStyledComponentsRendered(StethInDefiProjectPreview)
+    withStyledComponentsRendered(StethInDefiProjectPreview),
   );
 };

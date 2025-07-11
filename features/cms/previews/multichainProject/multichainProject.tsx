@@ -121,7 +121,7 @@ export const MultichainProjectPreview = ({
                       </p>
                     </div>
                   </Project>
-                ) : null
+                ) : null,
               )}
           </Projects>
           <Button
@@ -139,6 +139,6 @@ export const MultichainProjectPreview = ({
 export const registerMultichainProjectPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     multichainProjects.name,
-    withStyledComponentsRendered(MultichainProjectPreview)
+    withStyledComponentsRendered(MultichainProjectPreview),
   );
 };

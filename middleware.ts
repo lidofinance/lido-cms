@@ -8,7 +8,7 @@ export const CACHE_ALLOWED_LIST_FILES_PATHS = [
 
 // use only for cache files
 export const middleware = cacheControlMiddlewareFactory(
-  CACHE_ALLOWED_LIST_FILES_PATHS
+  CACHE_ALLOWED_LIST_FILES_PATHS,
 );
 
 export default middleware;

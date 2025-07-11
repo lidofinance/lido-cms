@@ -10,7 +10,7 @@ import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "decap-cms-core";
 
 const visibilityElement = (
   display: "block" | "none",
-  ref: RefObject<HTMLDivElement | null>
+  ref: RefObject<HTMLDivElement | null>,
 ) => {
   const { current } = ref;
   if (!current) return;
@@ -27,7 +27,7 @@ const UuidControl = forwardRef(
       classNameWrapper,
       field,
     }: CmsWidgetControlProps<string | null>,
-    refComponent
+    refComponent,
   ) => {
     let hide = field.get("hide");
     let ref = useRef<HTMLDivElement | null>(null);
@@ -41,7 +41,7 @@ const UuidControl = forwardRef(
       () => ({
         isValid,
       }),
-      []
+      [],
     );
 
     useEffect(() => {
@@ -63,7 +63,7 @@ const UuidControl = forwardRef(
         {value ?? ""}
       </div>
     );
-  }
+  },
 );
 
 UuidControl.displayName = "UuidControl";

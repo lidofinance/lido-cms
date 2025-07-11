@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=22.0.0 <23.0.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -14,17 +14,18 @@
     "lint:fix": "next lint --fix",
     "format": "prettier -c .",
     "format:fix": "yarn format -w",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@lidofinance/api-logger": "^0.51.0",
-    "@lidofinance/api-metrics": "^0.51.0",
-    "@lidofinance/next-api-wrapper": "^0.51.0",
-    "@lidofinance/next-cache-files-middleware": "^0.51.0",
-    "@lidofinance/next-ip-rate-limit": "^0.51.0",
-    "@lidofinance/next-pages": "^0.51.0",
-    "@lidofinance/rpc": "^0.51.0",
-    "@types/node": "^20.19.4",
+    "@lidofinance/api-logger": "^0.52.0",
+    "@lidofinance/api-metrics": "^0.52.0",
+    "@lidofinance/next-api-wrapper": "^0.52.0",
+    "@lidofinance/next-cache-files-middleware": "^0.52.0",
+    "@lidofinance/next-ip-rate-limit": "^0.52.0",
+    "@lidofinance/next-pages": "^0.52.0",
+    "@lidofinance/rpc": "^0.52.0",
+    "@types/node": "^22",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@types/styled-components": "^5.1.34",
@@ -56,7 +57,14 @@
     "@types/js-yaml": "^4.0.5",
     "@types/uuid": "^10.0.0",
     "decap-server": "^3.3.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
+  }
 }

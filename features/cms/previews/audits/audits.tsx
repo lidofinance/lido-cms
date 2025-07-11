@@ -51,10 +51,10 @@ export const AuditsPreview = ({ entry }: PreviewTemplateComponentProps) => {
 export const registerAuditsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     audits.name,
-    withStyledComponentsRendered(AuditsPreview)
+    withStyledComponentsRendered(AuditsPreview),
   );
   CMS.registerPreviewTemplate(
     l2Audits.name,
-    withStyledComponentsRendered(AuditsPreview)
+    withStyledComponentsRendered(AuditsPreview),
   );
 };

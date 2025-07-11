@@ -51,7 +51,7 @@ const ReadonlyAfterCreationControl = forwardRef(
       classNameWrapper,
       field,
     }: CmsWidgetControlProps<string | null>,
-    refComponent
+    refComponent,
   ) => {
     const [inputValue, setInputValue] = useState(value || "");
     const [hasValidationError, setHasValidationError] = useState(false);
@@ -128,7 +128,7 @@ const ReadonlyAfterCreationControl = forwardRef(
         )}
       </div>
     );
-  }
+  },
 );
 
 ReadonlyAfterCreationControl.displayName = "ReadonlyAfterCreationControl";
@@ -143,5 +143,5 @@ export const registerReadonlyAfterCreationWidget = () =>
   CMS.registerWidget(
     "readonly-after-creation",
     ReadonlyAfterCreationControl,
-    ReadonlyAfterCreationPreview
+    ReadonlyAfterCreationPreview,
   );

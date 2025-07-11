@@ -24,7 +24,7 @@ const Callback: FC<CallbackProps> = ({ message, content }) => {
       // send message to main window with da app
       window.opener?.postMessage(
         `authorization:${oauthProvider}:${message}:${JSON.stringify(content)}`,
-        event.origin
+        event.origin,
       );
     }
     window.addEventListener("message", recieveMessage, false);

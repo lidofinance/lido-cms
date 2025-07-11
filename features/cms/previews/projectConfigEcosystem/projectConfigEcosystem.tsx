@@ -53,6 +53,6 @@ export const ProjectConfigEcosystemPreview = ({
 export const registerProjectConfigEcosystemPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     project.name,
-    withStyledComponentsRendered(ProjectConfigEcosystemPreview)
+    withStyledComponentsRendered(ProjectConfigEcosystemPreview),
   );
 };

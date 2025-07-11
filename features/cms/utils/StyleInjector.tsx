@@ -29,7 +29,7 @@ const StyleInjector = ({ children }: StyleInjectorProps) => {
 };
 
 export const withStyledComponentsRendered = (
-  Comp: ComponentType<PreviewTemplateComponentProps>
+  Comp: ComponentType<PreviewTemplateComponentProps>,
 ): FC<PreviewTemplateComponentProps> => {
   return (props) => (
     <StyleInjector>

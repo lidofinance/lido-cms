@@ -26,6 +26,6 @@ export const MultichainPreview = ({
 export const registerMultichainPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     multichain.name,
-    withStyledComponentsRendered(MultichainPreview)
+    withStyledComponentsRendered(MultichainPreview),
   );
 };
