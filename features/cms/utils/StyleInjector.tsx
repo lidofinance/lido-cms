@@ -6,7 +6,7 @@ import React, {
   ComponentType,
 } from "react";
 import { StyleSheetManager } from "styled-components";
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 interface StyleInjectorProps {
   children: ReactNode;
@@ -29,7 +29,7 @@ const StyleInjector = ({ children }: StyleInjectorProps) => {
 };
 
 export const withStyledComponentsRendered = (
-  Comp: ComponentType<PreviewTemplateComponentProps>
+  Comp: ComponentType<PreviewTemplateComponentProps>,
 ): FC<PreviewTemplateComponentProps> => {
   return (props) => (
     <StyleInjector>

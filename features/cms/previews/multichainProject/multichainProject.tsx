@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 import { multichainProjects } from "features/cms/initialize/collections/";
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import {
@@ -121,7 +121,7 @@ export const MultichainProjectPreview = ({
                       </p>
                     </div>
                   </Project>
-                ) : null
+                ) : null,
               )}
           </Projects>
           <Button
@@ -139,6 +139,6 @@ export const MultichainProjectPreview = ({
 export const registerMultichainProjectPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     multichainProjects.name,
-    withStyledComponentsRendered(MultichainProjectPreview)
+    withStyledComponentsRendered(MultichainProjectPreview),
   );
 };

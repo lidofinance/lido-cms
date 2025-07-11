@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { featureFlags } from "features/cms/initialize/collections/lidoLanding/files/featureFlags";
 
@@ -98,7 +98,7 @@ export const FeatureFlagPreview = ({
 export const registerFeatureFlagPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     featureFlags.name,
-    withStyledComponentsRendered(FeatureFlagPreview)
+    withStyledComponentsRendered(FeatureFlagPreview),
   );
 };
 

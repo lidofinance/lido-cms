@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { ecosystemProjects } from "features/cms/initialize/collections/ecosystemProject/ecosystemProjects";
 
@@ -65,7 +65,7 @@ export const ProjectEcosystemPreview = ({
               <Category key={id}>
                 {
                   data.categories["ecosystem-config"][id].categories.find(
-                    (category) => category.id === id
+                    (category) => category.id === id,
                   )?.label
                 }
               </Category>
@@ -82,6 +82,6 @@ export const ProjectEcosystemPreview = ({
 export const registerProjectEcosystemPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     ecosystemProjects.name,
-    withStyledComponentsRendered(ProjectEcosystemPreview)
+    withStyledComponentsRendered(ProjectEcosystemPreview),
   );
 };

@@ -1,4 +1,4 @@
-import type { CmsCollection, CmsField } from "netlify-cms-core";
+import type { CmsCollection, CmsField } from "decap-cms-core";
 
 export const ecosystemProjects: CmsCollection = {
   name: "ecosystem-projects",
@@ -70,9 +70,9 @@ export const ecosystemProjects: CmsCollection = {
       widget: "relation",
       collection: "ecosystem-config",
       file: "project",
-      searchFields: ["tokens.*.label"],
-      valueField: "tokens.*.id",
-      displayFields: ["tokens.*.label"],
+      search_fields: ["tokens.*.label"],
+      value_field: "tokens.*.id",
+      display_fields: ["tokens.*.label"],
       multiple: true,
     } as unknown as CmsField,
     {
@@ -81,9 +81,9 @@ export const ecosystemProjects: CmsCollection = {
       widget: "relation",
       collection: "ecosystem-config",
       file: "project",
-      searchFields: ["categories.*.label"],
-      valueField: "categories.*.id",
-      displayFields: ["categories.*.label"],
+      search_fields: ["categories.*.label"],
+      value_field: "categories.*.id",
+      display_fields: ["categories.*.label"],
       multiple: true,
     } as unknown as CmsField,
     {
@@ -92,9 +92,9 @@ export const ecosystemProjects: CmsCollection = {
       widget: "relation",
       collection: "ecosystem-config",
       file: "project",
-      searchFields: ["networks.*.label"],
-      valueField: "networks.*.id",
-      displayFields: ["networks.*.label"],
+      search_fields: ["networks.*.label"],
+      value_field: "networks.*.id",
+      display_fields: ["networks.*.label"],
       multiple: true,
     } as unknown as CmsField,
     { label: "Publish", name: "ready", widget: "boolean", default: false },

@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { ecosystem } from "features/cms/initialize/collections/lidoLanding/files/ecosystem";
 
@@ -50,7 +50,7 @@ export const EcosystemPreview = ({
         {mostPopularProjectsData
           ? mostPopular
               .map(
-                (id) => mostPopularProjectsData["ecosystem-projects"][id].name
+                (id) => mostPopularProjectsData["ecosystem-projects"][id].name,
               )
               .join(", ")
           : "...loading"}
@@ -65,7 +65,7 @@ export const EcosystemPreview = ({
                   .map(
                     (id) =>
                       pagesProjectsData[pageName]?.["ecosystem-projects"][id]
-                        .name
+                        .name,
                   )
                   .join(", ")
               : "...loading"}
@@ -79,6 +79,6 @@ export const EcosystemPreview = ({
 export const registerEcosystemPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     ecosystem.name,
-    withStyledComponentsRendered(EcosystemPreview)
+    withStyledComponentsRendered(EcosystemPreview),
   );
 };

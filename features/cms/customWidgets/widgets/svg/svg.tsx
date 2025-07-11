@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import Uppy, { UppyFile } from "@uppy/core";
 import { DragDrop } from "@uppy/react";
-import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "netlify-cms-core";
+import { CmsWidgetControlProps, CmsWidgetPreviewProps } from "decap-cms-core";
 
 import "@uppy/core/dist/style.css";
 import "@uppy/core/dist/style.min.css";
@@ -14,7 +14,7 @@ import "@uppy/drag-drop/dist/style.min.css";
 
 import { Wrapped, ImageWrapper, Image, Button } from "./svgStyles";
 
-const readFile = (file: UppyFile): Promise<string> => {
+const readFile = (file: UppyFile<any, any>): Promise<string> => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (event: ProgressEvent<FileReader>) =>
@@ -57,7 +57,7 @@ const validationDimensionsSvg = (svgContent: string, options: any): boolean => {
     alert(
       `The image dimensions must be: 
 ${width ? `width: ${width}px` : ""}
-${height ? `height: ${height}px` : ""}`
+${height ? `height: ${height}px` : ""}`,
     );
 
   return check;
@@ -77,7 +77,7 @@ const SvgControl = forwardRef(
       onChange,
       classNameWrapper,
     }: CmsWidgetControlProps<string | null>,
-    ref
+    ref,
   ) => {
     const [uppy, setUppy] = useState<null | Uppy>(null);
 
@@ -97,7 +97,7 @@ const SvgControl = forwardRef(
       () => ({
         isValid,
       }),
-      []
+      [],
     );
 
     useEffect(() => {
@@ -124,7 +124,7 @@ const SvgControl = forwardRef(
       setUppy(uppyInstance);
 
       return () => {
-        uppyInstance.close();
+        uppyInstance.destroy();
       };
     }, []);
 
@@ -146,8 +146,10 @@ const SvgControl = forwardRef(
         )}
       </div>
     );
-  }
+  },
 );
+
+SvgControl.displayName = "SvgControl";
 
 const SvgPreview = ({ value }: CmsWidgetPreviewProps<string | null>) => {
   if (!value) return null;

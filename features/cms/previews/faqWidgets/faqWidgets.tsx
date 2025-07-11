@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 // FAQ Frontend Template
 import { indexPage as ftIndexPage } from "features/cms/initialize/collections/frontendTemplate/files/indexPage";
@@ -52,28 +52,28 @@ export const registerFaqWidgetsPreviewTemplate = () => {
   // FAQ Frontend Template
   CMS.registerPreviewTemplate(
     ftIndexPage.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
   CMS.registerPreviewTemplate(
     ftExamplePage.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
 
   // FAQ Ethereum Staking Widget
   CMS.registerPreviewTemplate(
     eswStakePage.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
   CMS.registerPreviewTemplate(
     eswWrapAndUnwrapPage.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
   CMS.registerPreviewTemplate(
     eswWithdrawalsPageRequestTab.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
   CMS.registerPreviewTemplate(
     eswWithdrawalsPageClaimTab.name,
-    withStyledComponentsRendered(FaqWidgetsPreview)
+    withStyledComponentsRendered(FaqWidgetsPreview),
   );
 };

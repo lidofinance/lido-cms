@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 import { multichain } from "features/cms/initialize/collections/lidoLanding/files/multichain";
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 
@@ -26,6 +26,6 @@ export const MultichainPreview = ({
 export const registerMultichainPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     multichain.name,
-    withStyledComponentsRendered(MultichainPreview)
+    withStyledComponentsRendered(MultichainPreview),
   );
 };

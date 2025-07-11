@@ -1,12 +1,12 @@
 import React, { useImperativeHandle, forwardRef, ReactNode } from "react";
-import { CmsWidgetControlProps } from "netlify-cms-core";
+import { CmsWidgetControlProps } from "decap-cms-core";
 
 import { Wrapper, Block, Text, Link } from "./infoStyles";
 
 const InfoControl = forwardRef(
   (
     { classNameWrapper, field }: CmsWidgetControlProps<string | null>,
-    refComponent
+    refComponent,
   ) => {
     let data = field.get("data");
 
@@ -19,7 +19,7 @@ const InfoControl = forwardRef(
       () => ({
         isValid,
       }),
-      []
+      [],
     );
 
     return (
@@ -54,7 +54,9 @@ const InfoControl = forwardRef(
           })}
       </Wrapper>
     );
-  }
+  },
 );
+
+InfoControl.displayName = "InfoControl";
 
 export const registerInfoWidget = () => CMS.registerWidget("info", InfoControl);

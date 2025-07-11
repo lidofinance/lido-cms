@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { validatorsProjects } from "features/cms/initialize/collections/validatorsProjects/validatorsProjects";
 
@@ -30,6 +30,6 @@ export const ProjectValidatorsPreview = ({
 export const registerProjectValidatorsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     validatorsProjects.name,
-    withStyledComponentsRendered(ProjectValidatorsPreview)
+    withStyledComponentsRendered(ProjectValidatorsPreview),
   );
 };

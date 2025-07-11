@@ -1,4 +1,4 @@
-import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { PreviewTemplateComponentProps } from "decap-cms-core";
 
 import { validators } from "features/cms/initialize/collections/lidoLanding/files/validators";
 
@@ -41,7 +41,7 @@ export const ValidatorsPreview = ({
               ? projects
                   .map(
                     (id) =>
-                      projectsData[pageName]?.["validators-projects"][id].name
+                      projectsData[pageName]?.["validators-projects"][id].name,
                   )
                   .join(", ")
               : "...loading"}
@@ -55,6 +55,6 @@ export const ValidatorsPreview = ({
 export const registerValidatorsPreviewTemplate = () => {
   CMS.registerPreviewTemplate(
     validators.name,
-    withStyledComponentsRendered(ValidatorsPreview)
+    withStyledComponentsRendered(ValidatorsPreview),
   );
 };
