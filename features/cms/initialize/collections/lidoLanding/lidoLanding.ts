@@ -1,5 +1,6 @@
 import type { CmsCollection } from "decap-cms-core";
 
+import { header } from "./files/header";
 import { scorecard } from "./files/scorecard";
 import { termsOfUse } from "./files/termsOfUse";
 import { faq } from "./files/faq";
@@ -17,6 +18,7 @@ export const lidoLanding: CmsCollection = {
   name: "lido-landing",
   label: "Lido landing",
   files: [
+    header,
     scorecard,
     ecosystem,
     faq,
