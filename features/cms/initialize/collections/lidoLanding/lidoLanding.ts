@@ -13,6 +13,7 @@ import { multichain } from "./files/multichain";
 import { nodeOperators } from "./files/nodeOperators";
 import { v3 } from "./files/v3";
 import { featureFlags } from "./files/featureFlags";
+import { stakeAndEarn } from "./files/stake-and-earn";
 
 export const lidoLanding: CmsCollection = {
   name: "lido-landing",
@@ -31,5 +32,6 @@ export const lidoLanding: CmsCollection = {
     nodeOperators,
     v3,
     featureFlags,
+    stakeAndEarn,
   ],
 };
