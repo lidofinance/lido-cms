@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   initializeCMS,
   registerScorecardTable,
+  registerArticleLink,
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
@@ -34,6 +35,8 @@ export default function Tmp() {
       // Editor components:
       // Scorecard:
       registerScorecardTable();
+      // Article link:
+      registerArticleLink();
       // Widgets:
       registerSvgWidget();
       registerUuidWidget();

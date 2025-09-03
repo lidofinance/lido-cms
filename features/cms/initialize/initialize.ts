@@ -15,6 +15,7 @@ import {
   teaserVideo,
   opportunities,
 } from "./collections";
+import { howLidoWorks } from "./collections/howLidoWorks/howLidoWorks";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
@@ -33,6 +34,7 @@ export const initializeCMS = () => {
       public_folder: "img",
       collections: [
         lidoLanding,
+        howLidoWorks,
         ecosystemProjects,
         ecosystemConfig,
         validatorsProjects,
