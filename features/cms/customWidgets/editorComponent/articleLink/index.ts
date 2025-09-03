@@ -26,9 +26,9 @@ export const registerArticleLink = () =>
       };
     },
     toBlock: function (data) {
-      return `[${data.linkText}](../how-lido-works/${data.article}/)`;
+      return `[${data.linkText}](${data.article}/)`;
     },
     toPreview: function (data) {
-      return `<a href="../how-lido-works/${data.article}/">${data.linkText}</a>`;
+      return `<a href="${data.article}/">${data.linkText}</a>`;
     },
   });
