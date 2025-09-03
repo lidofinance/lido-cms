@@ -12,6 +12,7 @@ export const howLidoWorks: CmsCollection = {
   summary:
     "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
   editor: { preview: false },
+  sortable_fields: ["path"],
 
   fields: [
     { label: "Title", name: "title", widget: "string", required: true },
