@@ -6,12 +6,11 @@ export const howLidoWorks: CmsCollection = {
   folder: "lido-landing/how-lido-works",
   create: true,
   label_singular: "Article",
-
   slug: "{{fields.title}}",
-  path: "{{fields.mainCategory}}/{{slug}}",
+  path: "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
   identifier_field: "title",
-
-  summary: "{{fields.title}}",
+  summary:
+    "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
   editor: { preview: false },
 
   fields: [
