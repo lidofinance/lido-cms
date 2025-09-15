@@ -1,5 +1,12 @@
 import type { CmsCollectionFile, CmsField } from "decap-cms-core";
 
+export const ggvApyTypeOptions = [
+  { label: "Daily", value: "daily" },
+  { label: "Weekly", value: "weekly" },
+  { label: "Weekly Moving Average", value: "weeklyMovingAverage" },
+];
+export const defaultApyType = "weekly";
+
 export const stakeAndEarn: CmsCollectionFile = {
   name: "stake-and-earn",
   label: "Stake and Earn",
@@ -60,6 +67,14 @@ export const stakeAndEarn: CmsCollectionFile = {
           name: "isNew",
           widget: "boolean",
           default: true,
+        },
+        {
+          label: "GGV APY Type",
+          name: "ggvApyType",
+          widget: "select",
+          options: ggvApyTypeOptions,
+          default: defaultApyType,
+          required: false,
         },
         {
           label: "Urgent Mode",
