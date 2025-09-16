@@ -10,7 +10,7 @@ export const howLidoWorks: CmsCollection = {
   path: "{{slug}}",
   identifier_field: "title",
   summary:
-    "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
+    "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{fields.title}}",
   sortable_fields: ["path"],
 
   fields: [
@@ -30,7 +30,7 @@ export const howLidoWorks: CmsCollection = {
       widget: "string",
       required: false,
     },
-    { label: "Order", name: "order", widget: "number", default: 0 },
+    { label: "Order", name: "order", widget: "number", default: 1 },
     {
       label: "Content",
       name: "content",
