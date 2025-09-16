@@ -2,7 +2,7 @@ import type { CmsCollection, CmsField } from "decap-cms-core";
 
 export const howLidoWorks: CmsCollection = {
   name: "HowLidoWorks",
-  label: "How Lido works",
+  label: "How Lido works (Articles)",
   folder: "lido-landing/how-lido-works",
   create: true,
   identifier_field: "title",

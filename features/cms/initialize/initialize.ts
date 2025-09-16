@@ -7,7 +7,7 @@ import {
   emergencyBanner,
   ethereumStakingWidget,
   frontendTemplate,
-  howLidoWorksTOC,
+  howLidoWorksAll,
   lidoLanding,
   multichainProjects,
   opportunities,
@@ -36,7 +36,7 @@ export const initializeCMS = () => {
       collections: [
         lidoLanding,
         howLidoWorks,
-        howLidoWorksTOC,
+        howLidoWorksAll,
         ecosystemProjects,
         ecosystemConfig,
         validatorsProjects,

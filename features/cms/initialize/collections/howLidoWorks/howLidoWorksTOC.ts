@@ -1,30 +1,8 @@
 import type { CmsCollection } from "decap-cms-core";
+import { howLidoWorksTOC } from "./files/TOC";
 
-export const howLidoWorksTOC: CmsCollection = {
+export const howLidoWorksAll: CmsCollection = {
   name: "HowLidoWorksTOC",
-  label: "How Lido Works - Table of Contents",
-  folder: "lido-landing/how-lido-works-toc",
-  create: true,
-  label_singular: "Table of Contents",
-  summary: "Articles Order",
-
-  fields: [
-    {
-      label: "Articles Order",
-      name: "articlesOrder",
-      widget: "list",
-
-      fields: [
-        {
-          name: "article",
-          label: "Article",
-          widget: "relation",
-          collection: "HowLidoWorks",
-          search_fields: ["title"],
-          value_field: "slug",
-          display_fields: ["title", "mainCategory", "subCategory"],
-        },
-      ],
-    },
-  ],
+  label: "How Lido Works (Table of Contents)",
+  files: [howLidoWorksTOC],
 };
