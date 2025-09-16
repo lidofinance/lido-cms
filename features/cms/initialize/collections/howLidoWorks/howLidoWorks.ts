@@ -15,6 +15,14 @@ export const howLidoWorks: CmsCollection = {
 
   fields: [
     { label: "Title", name: "title", widget: "string", required: true },
+    {
+      label: "Slug",
+      name: "slug",
+      widget: "string",
+      required: false,
+      default: "",
+      hint: "Auto-generated if left empty",
+    },
     { label: "Main Category", name: "mainCategory", widget: "string" },
     {
       label: "Sub Category",
