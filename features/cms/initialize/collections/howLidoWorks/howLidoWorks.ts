@@ -7,7 +7,7 @@ export const howLidoWorks: CmsCollection = {
   create: true,
   label_singular: "Article",
   slug: "{{fields.title}}",
-  path: "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
+  path: "{{slug}}",
   identifier_field: "title",
   summary:
     "{{fields.mainCategory}}/{{fields.subCategory}}/{{fields.order}}/{{slug}}",
