@@ -16,7 +16,7 @@ import {
   teaserVideo,
   validatorsProjects,
 } from "./collections";
-import { howLidoWorks } from "./collections/howLidoWorks/howLidoWorks";
+import { howLidoWorksArticle } from "./collections/howLidoWorks/howLidoWorksArticle";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
@@ -35,7 +35,7 @@ export const initializeCMS = () => {
       public_folder: "img",
       collections: [
         lidoLanding,
-        howLidoWorks,
+        howLidoWorksArticle,
         howLidoWorksAll,
         ecosystemProjects,
         ecosystemConfig,
@@ -62,7 +62,7 @@ export const initializeCMS = () => {
     name: "preSave",
     handler: ({ entry }) => {
       // creating slug for HowLidoWorks articles
-      if (entry.get("collection") !== "HowLidoWorks") return;
+      if (entry.get("collection") !== "HowLidoWorksArticle") return;
       if (entry.get("data").get("slug")) {
         return entry.get("data");
       }

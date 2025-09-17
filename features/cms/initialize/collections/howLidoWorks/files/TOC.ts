@@ -41,7 +41,7 @@ export const howLidoWorksTOC: CmsCollectionFile = {
                   name: "article",
                   label: "Article",
                   widget: "relation",
-                  collection: "HowLidoWorks",
+                  collection: "HowLidoWorksArticle",
                   search_fields: ["title"],
                   display_fields: ["title"],
                   value_field: "{{title}} ({{id}})",

@@ -13,7 +13,7 @@ export const registerArticleLink = () =>
         name: "article",
         label: "Article",
         widget: "relation",
-        collection: "HowLidoWorks",
+        collection: "HowLidoWorksArticle",
         search_fields: ["name"],
         value_field: "slug",
         display_fields: ["name"],
