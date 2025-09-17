@@ -3,7 +3,7 @@ import type { CmsCollectionFile } from "decap-cms-core";
 export const howLidoWorksTOC: CmsCollectionFile = {
   name: "HowLidoWorksTOC",
   label: "Table of Contents",
-  file: "lido-landing/how-lido-works-toc/toc.md",
+  file: "lido-landing/how-lido-works/toc.md",
   fields: [
     {
       label: "Main Categories",

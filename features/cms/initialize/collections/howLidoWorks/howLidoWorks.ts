@@ -3,10 +3,10 @@ import type { CmsCollection, CmsField } from "decap-cms-core";
 export const howLidoWorks: CmsCollection = {
   name: "HowLidoWorks",
   label: "How Lido works (Articles)",
-  folder: "lido-landing/how-lido-works",
+  folder: "lido-landing/how-lido-works/articles",
   create: true,
   identifier_field: "title",
-  summary: `{{fields.mainCategory}}{{fields.subCategory}}/{{fields.order}}/{{fields.title}}`,
+  summary: `{{fields.title}}`,
   slug: "{{fields.id}}",
   fields: [
     {
@@ -24,14 +24,6 @@ export const howLidoWorks: CmsCollection = {
       default: "",
       hint: "Auto-generated if left empty",
     },
-    { label: "Main Category", name: "mainCategory", widget: "string" },
-    {
-      label: "Sub Category",
-      name: "subCategory",
-      widget: "string",
-      required: false,
-    },
-    { label: "Order", name: "order", widget: "number", default: 1 },
     {
       label: "Content",
       name: "content",
