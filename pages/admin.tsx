@@ -19,6 +19,7 @@ import {
   registerMultichainProjectPreviewTemplate,
   registerMultichainPreviewTemplate,
   registerFeatureFlagPreviewTemplate,
+  registerRewardsCalculator,
 } from "features/cms";
 
 export default function Tmp() {
@@ -37,6 +38,7 @@ export default function Tmp() {
       registerScorecardTable();
       // Article link:
       registerArticleLink();
+      registerRewardsCalculator();
       // Widgets:
       registerSvgWidget();
       registerUuidWidget();
