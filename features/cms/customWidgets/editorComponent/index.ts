@@ -5,3 +5,6 @@ export * from "./scorecard/table";
 export * from "./articleLink";
 
 export * from "./rewardsCalculator/index";
+
+// button
+export * from "./button";

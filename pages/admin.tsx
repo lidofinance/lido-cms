@@ -3,6 +3,7 @@ import {
   initializeCMS,
   registerScorecardTable,
   registerArticleLink,
+  registerButton,
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
@@ -44,6 +45,7 @@ export default function Tmp() {
       registerUuidWidget();
       registerInfoWidget();
       registerReadonlyAfterCreationWidget();
+      registerButton();
 
       // Previews
       registerFaqPreviewTemplate();

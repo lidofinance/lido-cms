@@ -30,7 +30,12 @@ export const howLidoWorksArticle: CmsCollection = {
       label: "Content",
       name: "content",
       widget: "markdown",
-      editor_components: ["article-link", "image", "rewards-calculator"],
+      editor_components: [
+        "article-link",
+        "image",
+        "rewards-calculator",
+        "button",
+      ],
     },
   ],
 };

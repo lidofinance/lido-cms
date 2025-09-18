@@ -1,22 +1,22 @@
 import getConfig from "next/config";
 
 import {
-  banners,
-  ecosystemConfig,
-  ecosystemProjects,
-  emergencyBanner,
-  ethereumStakingWidget,
-  frontendTemplate,
-  howLidoWorksAll,
   lidoLanding,
-  multichainProjects,
-  opportunities,
-  stethInDefiConfig,
-  stethInDefiProject,
-  teaserVideo,
+  ecosystemProjects,
+  ecosystemConfig,
   validatorsProjects,
+  frontendTemplate,
+  ethereumStakingWidget,
+  banners,
+  emergencyBanner,
+  stethInDefiProject,
+  stethInDefiConfig,
+  multichainProjects,
+  teaserVideo,
+  opportunities,
+  howLidoWorksArticle,
+  howLidoWorksAll,
 } from "./collections";
-import { howLidoWorksArticle } from "./collections/howLidoWorks/howLidoWorksArticle";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
