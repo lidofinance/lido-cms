@@ -4,6 +4,8 @@ export const howLidoWorksArticle: CmsCollection = {
   name: "HowLidoWorksArticle",
   label: "How Lido works (Articles)",
   folder: "lido-landing/how-lido-works/articles",
+  media_folder: "./img",
+  public_folder: "./img",
   create: true,
   identifier_field: "title",
   summary: `{{fields.title}}`,
