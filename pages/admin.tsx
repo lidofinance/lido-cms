@@ -3,6 +3,7 @@ import {
   initializeCMS,
   registerScorecardTable,
   registerArticleLink,
+  registerButton,
   registerSvgWidget,
   registerUuidWidget,
   registerInfoWidget,
@@ -19,6 +20,8 @@ import {
   registerMultichainProjectPreviewTemplate,
   registerMultichainPreviewTemplate,
   registerFeatureFlagPreviewTemplate,
+  registerRewardsCalculator,
+  registerHlwTOCPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -37,11 +40,13 @@ export default function Tmp() {
       registerScorecardTable();
       // Article link:
       registerArticleLink();
+      registerRewardsCalculator();
       // Widgets:
       registerSvgWidget();
       registerUuidWidget();
       registerInfoWidget();
       registerReadonlyAfterCreationWidget();
+      registerButton();
 
       // Previews
       registerFaqPreviewTemplate();
@@ -56,6 +61,7 @@ export default function Tmp() {
       registerMultichainProjectPreviewTemplate();
       registerMultichainPreviewTemplate();
       registerFeatureFlagPreviewTemplate();
+      registerHlwTOCPreviewTemplate();
     })();
   }, []);
 

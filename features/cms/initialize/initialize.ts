@@ -14,8 +14,9 @@ import {
   multichainProjects,
   teaserVideo,
   opportunities,
+  howLidoWorksArticle,
+  howLidoWorksAll,
 } from "./collections";
-import { howLidoWorks } from "./collections/howLidoWorks/howLidoWorks";
 
 const { publicRuntimeConfig } = getConfig();
 export const initializeCMS = () => {
@@ -34,7 +35,8 @@ export const initializeCMS = () => {
       public_folder: "img",
       collections: [
         lidoLanding,
-        howLidoWorks,
+        howLidoWorksArticle,
+        howLidoWorksAll,
         ecosystemProjects,
         ecosystemConfig,
         validatorsProjects,
@@ -54,6 +56,28 @@ export const initializeCMS = () => {
   // Register custom markdown renderer
   CMS.registerPreviewStyle("img {max-width: 400px; max-height: 400px}", {
     raw: true,
+  });
+
+  CMS.registerEventListener({
+    name: "preSave",
+    handler: ({ entry }) => {
+      // creating slug for HowLidoWorks articles
+      if (entry.get("collection") !== "HowLidoWorksArticle") return;
+      if (entry.get("data").get("slug")) {
+        return entry.get("data");
+      }
+      const slugifiedTitle = entry
+        .get("data")
+        .get("title")
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w\-]+/g, "")
+        .replace(/\-\-+/g, "-")
+        .replace(/^-+/, "")
+        .replace(/-+$/, "");
+
+      return entry.get("data").set("slug", slugifiedTitle);
+    },
   });
 
   // ...existing event listeners...

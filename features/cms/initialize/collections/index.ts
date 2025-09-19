@@ -11,3 +11,5 @@ export * from "./stethInDefiProject/stethInDefiProject";
 export * from "./multichainProjects/multichainProjects";
 export * from "./teaserVideo/teaserVideo";
 export * from "./opportunities/opportunities";
+export * from "./howLidoWorks/howLidoWorksArticle";
+export * from "./howLidoWorks/howLidoWorksTOC";
