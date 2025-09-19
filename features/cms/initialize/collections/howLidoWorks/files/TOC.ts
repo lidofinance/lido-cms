@@ -9,10 +9,10 @@ export const howLidoWorksTOC: CmsCollectionFile = {
       label: "Main Categories",
       name: "mainCategories",
       widget: "list",
-      summary: "{{fields.mainCategoryName}}",
+      summary: "{{fields.categoryName}}",
       fields: [
         {
-          name: "mainCategoryName",
+          name: "categoryName",
           label: "Main Category Name",
           widget: "string",
           required: true,

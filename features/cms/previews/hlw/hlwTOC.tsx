@@ -6,9 +6,11 @@ import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import { InnerUL, MainUL } from "./hlwTOCStyles";
 
 type Data = {
-  mainCategoryName: string;
-  categories: { categoryName: string; articles: { article: string }[] }[];
-}[];
+  categoryName?: string;
+  articles?: { article: string }[];
+  categories: Data[];
+};
+
 type CategoriesData = {
   categories: {
     articles: {
@@ -23,7 +25,7 @@ export const HLWTOCPreview = ({
   entry,
   fieldsMetaData,
 }: PreviewTemplateComponentProps) => {
-  const { mainCategories }: { mainCategories: Data } = entry
+  const { mainCategories }: { mainCategories: Data[] } = entry
     .getIn(["data"])
     .toJS();
 
@@ -36,8 +38,8 @@ export const HLWTOCPreview = ({
     <>
       <MainUL>
         {mainCategories.map((category) => (
-          <li key={category.mainCategoryName}>
-            {category.mainCategoryName}
+          <li key={category.categoryName}>
+            {category.categoryName}
 
             <InnerUL>
               {category.categories.map((subCat) => {
