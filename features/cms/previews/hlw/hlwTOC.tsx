@@ -34,38 +34,32 @@ export const HLWTOCPreview = ({
   };
   const allArticles =
     additionalData?.categories?.articles?.article?.HowLidoWorksArticle || {};
-  return (
-    <>
-      <MainUL>
-        {mainCategories.map((category) => (
-          <li key={category.categoryName}>
-            {category.categoryName}
 
-            <InnerUL>
-              {category.categories.map((subCat) => {
-                const articlesList = subCat.articles && (
-                  <ul>
-                    {subCat.articles.map(({ article }, i) => {
-                      return <li key={i}>{allArticles[article]?.title}</li>;
-                    })}
-                  </ul>
-                );
-                if (!subCat.categoryName) {
-                  return articlesList;
-                }
-                return (
-                  <li key={subCat.categoryName}>
-                    <div>{subCat.categoryName}</div>
-                    {articlesList}
-                  </li>
-                );
-              })}
-            </InnerUL>
-          </li>
-        ))}
-      </MainUL>
-    </>
-  );
+  const renderSubList = (categories: Data[]) => {
+    if (categories.length === 0) {
+      return <></>;
+    }
+    return categories.map((subCat) => {
+      const articlesList = subCat.articles && (
+        <InnerUL>
+          {subCat.articles.map(({ article }, i) => {
+            return <li key={i}>{allArticles[article]?.title}</li>;
+          })}
+        </InnerUL>
+      );
+      if (!subCat.categoryName) {
+        return articlesList;
+      }
+      return (
+        <li key={subCat.categoryName}>
+          <div>{subCat.categoryName}</div>
+          {renderSubList(subCat.categories || [])}
+          {articlesList}
+        </li>
+      );
+    });
+  };
+  return <MainUL>{renderSubList(mainCategories)}</MainUL>;
 };
 
 export const registerHlwTOCPreviewTemplate = () => {
