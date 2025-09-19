@@ -21,6 +21,7 @@ import {
   registerMultichainPreviewTemplate,
   registerFeatureFlagPreviewTemplate,
   registerRewardsCalculator,
+  registerHlwTOCPreviewTemplate,
 } from "features/cms";
 
 export default function Tmp() {
@@ -60,6 +61,7 @@ export default function Tmp() {
       registerMultichainProjectPreviewTemplate();
       registerMultichainPreviewTemplate();
       registerFeatureFlagPreviewTemplate();
+      registerHlwTOCPreviewTemplate();
     })();
   }, []);
 

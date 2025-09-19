@@ -44,7 +44,7 @@ export const howLidoWorksTOC: CmsCollectionFile = {
                   collection: "HowLidoWorksArticle",
                   search_fields: ["title"],
                   display_fields: ["title"],
-                  value_field: "{{title}} ({{id}})",
+                  value_field: "{{id}}",
                 },
               ],
             },

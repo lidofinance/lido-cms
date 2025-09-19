@@ -5,6 +5,6 @@ export const registerRewardsCalculator = () =>
     label: "Rewards calculator",
     fields: [],
     toPreview: function () {
-      return `<div style="padding: 10px; background: grey">Rewards calculator component</div>`;
+      return `<div style="padding: 20px; margin: 10px 0; background: grey">Rewards calculator component</div>`;
     },
   });
