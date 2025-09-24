@@ -58,27 +58,5 @@ export const initializeCMS = () => {
     raw: true,
   });
 
-  CMS.registerEventListener({
-    name: "preSave",
-    handler: ({ entry }) => {
-      // creating slug for HowLidoWorks articles
-      if (entry.get("collection") !== "HowLidoWorksArticle") return;
-      if (entry.get("data").get("slug")) {
-        return entry.get("data");
-      }
-      const slugifiedTitle = entry
-        .get("data")
-        .get("title")
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^\w\-]+/g, "")
-        .replace(/\-\-+/g, "-")
-        .replace(/^-+/, "")
-        .replace(/-+$/, "");
-
-      return entry.get("data").set("slug", slugifiedTitle);
-    },
-  });
-
   // ...existing event listeners...
 };

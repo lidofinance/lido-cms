@@ -19,14 +19,6 @@ export const howLidoWorksArticle: CmsCollection = {
     } as unknown as CmsField,
     { label: "Title", name: "title", widget: "string", required: true },
     {
-      label: "Slug",
-      name: "slug",
-      widget: "string",
-      required: false,
-      default: "",
-      hint: "Auto-generated if left empty",
-    },
-    {
       label: "Content",
       name: "content",
       widget: "markdown",
