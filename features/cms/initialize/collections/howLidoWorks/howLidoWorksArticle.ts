@@ -32,6 +32,7 @@ export const howLidoWorksArticle: CmsCollection = {
       widget: "markdown",
       editor_components: [
         "article-link",
+        "staking-info",
         "image",
         "rewards-calculator",
         "button",

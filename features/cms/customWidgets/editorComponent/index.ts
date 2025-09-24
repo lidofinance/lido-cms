@@ -8,3 +8,4 @@ export * from "./rewardsCalculator/index";
 
 // button
 export * from "./button";
+export * from "./stakingInfo";

@@ -22,6 +22,7 @@ import {
   registerFeatureFlagPreviewTemplate,
   registerRewardsCalculator,
   registerHlwTOCPreviewTemplate,
+  registerStakingInfo,
 } from "features/cms";
 
 export default function Tmp() {
@@ -47,6 +48,7 @@ export default function Tmp() {
       registerInfoWidget();
       registerReadonlyAfterCreationWidget();
       registerButton();
+      registerStakingInfo();
 
       // Previews
       registerFaqPreviewTemplate();
