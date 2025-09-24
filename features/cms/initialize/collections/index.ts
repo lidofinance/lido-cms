@@ -12,4 +12,4 @@ export * from "./multichainProjects/multichainProjects";
 export * from "./teaserVideo/teaserVideo";
 export * from "./opportunities/opportunities";
 export * from "./howLidoWorks/howLidoWorksArticle";
-export * from "./howLidoWorks/howLidoWorksTOC";
+export * from "./howLidoWorksTOC/howLidoWorksTOC";

@@ -1,6 +1,6 @@
 import { PreviewTemplateComponentProps } from "decap-cms-core";
 
-import { howLidoWorksAll } from "features/cms/initialize/collections/howLidoWorks/howLidoWorksTOC";
+import { howLidoWorksAll } from "features/cms/initialize/collections/howLidoWorksTOC/howLidoWorksTOC";
 
 import { withStyledComponentsRendered } from "features/cms/utils/StyleInjector";
 import { InnerUL, MainUL } from "./hlwTOCStyles";

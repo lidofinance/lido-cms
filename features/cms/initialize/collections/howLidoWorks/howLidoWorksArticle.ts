@@ -17,7 +17,7 @@ export const howLidoWorksArticle: CmsCollection = {
       widget: "uuid",
       hide: true,
     } as unknown as CmsField,
-    { label: "Title", name: "title", widget: "string", required: true },
+    { label: "Title", name: "title", widget: "string" },
     {
       label: "Content",
       name: "content",
