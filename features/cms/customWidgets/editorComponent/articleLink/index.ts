@@ -14,9 +14,9 @@ export const registerArticleLink = () =>
         label: "Article",
         widget: "relation",
         collection: "HowLidoWorksArticle",
-        search_fields: ["name"],
-        value_field: "slug",
-        display_fields: ["name"],
+        search_fields: ["title"],
+        value_field: "id",
+        display_fields: ["title"],
       },
     ],
     fromBlock: function (match) {
@@ -26,9 +26,9 @@ export const registerArticleLink = () =>
       };
     },
     toBlock: function (data) {
-      return `[${data.linkText}](${data.article}/)`;
+      return `[${data.linkText}](${data.article})`;
     },
     toPreview: function (data) {
-      return `<a href="${data.article}/">${data.linkText}</a>`;
+      return `<a href="${data.article}">${data.linkText}</a>`;
     },
   });

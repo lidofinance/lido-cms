@@ -15,7 +15,6 @@ export const howLidoWorksTOC: CmsCollectionFile = {
           name: "categoryName",
           label: "Main Category Name",
           widget: "string",
-          required: true,
           hint: "Top-level category",
         },
         {
