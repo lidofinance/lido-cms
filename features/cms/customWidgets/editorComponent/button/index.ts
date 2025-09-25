@@ -8,13 +8,11 @@ export const registerButton = () =>
         name: "text",
         label: "Button Text",
         widget: "string",
-        required: true,
       },
       {
         name: "link",
         label: "Link URL",
         widget: "string",
-        required: true,
         hint: "Enter the full URL or relative path",
       },
     ],

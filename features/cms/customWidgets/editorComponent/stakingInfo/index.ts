@@ -9,20 +9,18 @@ export const registerStakingInfo = () =>
         label: "Amount of ETH",
         widget: "string",
         default: "32 ETH",
-        required: true,
       },
       {
         name: "action",
         label: "Action",
         widget: "string",
-        required: true,
+
         default: "To run your node",
       },
       {
         name: "expertise",
         label: "Expertise",
         widget: "string",
-        required: true,
         default: "High level",
       },
     ],
