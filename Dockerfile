@@ -23,4 +23,4 @@ RUN addgroup -g 10001 app && adduser -u 10001 -G app -D app
 COPY --from=build /app ./
 USER 10001
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["npm", "run", "start"]
