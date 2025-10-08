@@ -8,8 +8,11 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL,
-    githubRepo: process.env.GITHUB_REPO,
-    githubBranch: process.env.GITHUB_BRANCH,
+    githubRepo:
+      process.env.GITHUB_REPO && process.env.GITHUB_REPO.includes("/")
+        ? process.env.GITHUB_REPO
+        : "lidofinance/lido-content",
+    githubBranch: process.env.GITHUB_BRANCH ?? "main",
   },
   serverRuntimeConfig: {
     rateLimit: process.env.RATE_LIMIT,

@@ -1,9 +1,0 @@
-backend:
-  name: github
-  repo: lidofinance/lido-content
-  branch: main
-
-local_backend: true
-
-media_folder: "public/uploads"
-public_folder: "/uploads"
