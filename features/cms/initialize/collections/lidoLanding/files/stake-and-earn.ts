@@ -58,9 +58,22 @@ export const stakeAndEarn: CmsCollectionFile = {
           required: false,
         },
         {
-          label: "Deposit Link",
+          label: "Button Label",
+          name: "buttonLabel",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "Button Link",
           name: "depositLink",
           widget: "string",
+        },
+        {
+          label: "Is button disabled",
+          name: "isButtonDisabled",
+          widget: "boolean",
+          default: false,
+          required: false,
         },
         {
           label: "'NEW' label",
@@ -75,6 +88,27 @@ export const stakeAndEarn: CmsCollectionFile = {
           options: ggvApyTypeOptions,
           default: defaultApyType,
           required: false,
+        },
+        {
+          label: "Tooltip",
+          name: "tooltip",
+          widget: "object",
+          collapsed: true,
+          fields: [
+            {
+              label: "Label",
+              name: "label",
+              widget: "string",
+              required: false,
+            },
+            {
+              label: "Text",
+              name: "text",
+              widget: "string",
+              hint: "If this field is empty, the tooltip will not be displayed",
+              required: false,
+            },
+          ],
         },
         {
           label: "Urgent Mode",
