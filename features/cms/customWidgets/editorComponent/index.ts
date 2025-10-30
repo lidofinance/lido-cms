@@ -10,3 +10,5 @@ export * from "./rewardsCalculator/index";
 export * from "./button";
 export * from "./stakingInfo";
 export * from "./bigSpace";
+export * from "./infoBlock";
+export * from "./feeTable";

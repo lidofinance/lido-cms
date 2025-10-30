@@ -28,6 +28,8 @@ export const howLidoWorksArticle: CmsCollection = {
         "staking-info",
         "image",
         "rewards-calculator",
+        "info-block",
+        "fee-table",
         "button",
       ],
     },

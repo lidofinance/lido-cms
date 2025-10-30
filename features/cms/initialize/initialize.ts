@@ -56,7 +56,13 @@ export const initializeCMS = () => {
   // Register custom markdown renderer
   CMS.registerPreviewStyle("img {max-width: 400px; max-height: 400px}", {
     raw: true,
-  });
+  }); // Register custom markdown renderer
+  CMS.registerPreviewStyle(
+    "blockquote {padding: 10px; background: lightgrey}",
+    {
+      raw: true,
+    },
+  );
 
   // ...existing event listeners...
 };
