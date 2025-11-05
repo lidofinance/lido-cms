@@ -24,6 +24,8 @@ import {
   registerHlwTOCPreviewTemplate,
   registerStakingInfo,
   registerBigSpace,
+  registerInfoBlock,
+  registerFeeTable,
 } from "features/cms";
 
 export default function Tmp() {
@@ -49,6 +51,8 @@ export default function Tmp() {
       registerInfoWidget();
       registerReadonlyAfterCreationWidget();
       registerButton();
+      registerInfoBlock();
+      registerFeeTable();
       registerBigSpace();
       registerStakingInfo();
 
