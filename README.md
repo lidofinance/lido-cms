@@ -7,7 +7,7 @@
 - Run `yarn proxy` from the root directory of the above repository.
 - Run dev server with `yarn dev`.
 
-# Local development (files are saved on github)
+# Local development (files are saved on GitHub)
 
 - Install dependencies with `yarn`.
 - Setup `.env` file with `cp .env.sample .env`.
